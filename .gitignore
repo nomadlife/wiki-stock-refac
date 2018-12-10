@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+/.vscode
+/myvenv
+/testproject/db
+/testproject/plugins
+/stock/statics/stock/data

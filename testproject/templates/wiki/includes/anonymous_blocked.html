@@ -1,0 +1,13 @@
+{% load i18n %}
+
+<em>
+{% url 'wiki:signup' as signup_url %}
+{% url 'wiki:login' as login_url %}
+{% if login_url and signup_url %}
+  {% blocktrans trimmed %}
+  <a href="{{ login_url }}">로그인</a>  (<a href="{{ signup_url }}">계정등록</a>) 이 필요합니다.
+  {% endblocktrans %}
+{% else %}
+  {% trans "로그인이나 계정등록을 해주십시오." %}
+{% endif %}
+</em>

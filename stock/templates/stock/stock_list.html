@@ -1,0 +1,92 @@
+{% extends "stock/base.html" %}
+{% load wiki_tags %}
+
+{% block wiki_pagetitle %}home{% endblock %}
+
+{% block wiki_contents %}
+
+<div class="jumbotron">
+      <h3>종목 리스트</h3>
+
+      <table class="table table-striped">
+            <thead>
+                  <tr>
+                        <th>
+                              <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">종목코드</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a href="#" class="dropdown-item">오름차순</a>
+                                          <a href="#" class="dropdown-item">내림차순</a>
+                                          <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'wiki:search' article_id=article.id path=urlpath.path %}"
+                                          >
+                                          <div class="input-group">
+                                                <input type="search" class="form-control search-query" name="q" placeholder="필터" />
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                <span class="fa fa-search"></span>
+                                                </button>
+                                                </span>
+                                          </div><!-- /input-group -->
+                                          </form>
+                                    </div>
+                              </div>
+                        </th>
+                        <th>
+                              <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">종목명</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a href="#" class="dropdown-item">오름차순</a>
+                                          <a href="#" class="dropdown-item">내림차순</a>
+                                          <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'wiki:search' article_id=article.id path=urlpath.path %}"
+                                          >
+                                          <div class="input-group">
+                                                <input type="search" class="form-control search-query" name="q" placeholder="필터" />
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                <span class="fa fa-search"></span>
+                                                </button>
+                                                </span>
+                                          </div><!-- /input-group -->
+                                          </form>
+                                    </div>
+                              </div>
+                        </th>
+                        <th>
+                              <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">업종</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a href="#" class="dropdown-item">오름차순</a>
+                                          <a href="#" class="dropdown-item">내림차순</a>
+                                          <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'wiki:search' article_id=article.id path=urlpath.path %}"
+                                          >
+                                          <div class="input-group">
+                                                <input type="search" class="form-control search-query" name="q" placeholder="필터" />
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                <span class="fa fa-search"></span>
+                                                </button>
+                                                </span>
+                                          </div><!-- /input-group -->
+                                          </form>
+                                    </div>
+                              </div>
+                        </th>
+                  </tr>
+            </thead>
+            <tbody>
+                  {% for item in file_content %}
+                  <tr>
+
+                        <td><a href="#">{{ item.2 }}</a></td>
+                        <td>{{ item.1 }}</td>
+                        <td>{{ item.3}}</td>
+
+                  </tr>
+                  {% endfor %}
+            </tbody>
+      </table>
+
+</div>
+
+
+{% endblock %}

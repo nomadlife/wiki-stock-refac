@@ -1,0 +1,144 @@
+{% extends "stock/base.html" %}
+{% load static %}
+
+{% block jquery %}
+<script>
+      var ticker = "{{ticker}}"
+      var data1 = []
+      var data2 = []
+      var labels = []
+
+      $.ajax({
+            type: "GET",
+            url: "{% url 'api-chart-data' ticker=ticker %}",
+            success: function (data) {
+                  console.log("success")
+                  labels = data.labels
+                  data1 = data.value1
+                  data2 = data.value2
+                  
+                  setChart()
+            },
+            error: function (error_data) {
+                  console.log("error")
+                  console.log('url:', url)
+                  console.log(error_data)
+            }
+      });
+
+      function setChart() {
+            var ctx = document.getElementById("myChart");
+            var myChart = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                        labels: labels,
+                        datasets: [{
+                              label: '종가',
+                              data: data1,
+                              fill: false,
+                              lineTension: 0,
+                              borderColor: 'rgba(255,99,132,1)',
+                              borderWidth: 1,
+                              // showLine: false,
+                              pointRadius: 0,
+                              // pointBackgroundColor: [],
+                              // pointBorderColor: [],
+                        },
+                        {
+                              label: '예측',
+                              data: data2,
+                              fill: false,
+                              lineTension: 0,
+                              borderColor: 'rgba(75, 192, 192, 1)',
+                              borderWidth: 1,
+                              // showLine: false,
+                              pointRadius: 1,
+                              // pointBackgroundColor: [],
+                              // pointBorderColor: [],
+                        }]
+                  },
+                  options: {
+                        animation: false,
+                        responsive: false,
+                        // maintainAspectRatio: true,
+                        legend: {
+                              display: true,
+                              position: 'top',
+                        },
+                        hover: {
+                              mode: 'label'
+                        },
+                        title: {
+                              display: true,
+                              text: "{{ data.1 }} : {{ ticker }}"
+                        },
+                  }
+            })
+      }
+</script>
+{% endblock %}
+
+{% block wiki_pagetitle %}result{% endblock %}
+
+
+{% block wiki_contents %}
+
+
+      <div class="row">
+            <h3 class="p-2"> {{ data.1 }} : {{ ticker }} </h3>
+            <div class="col-5 dropdown">
+                  <a class="dropdown-toggle btn btn-link" data-toggle="dropdown">기업정보</a>
+                  <div class="dropdown-menu col-sm " aria-expanded="false">
+                        업종 : {{data.3}} <br>
+                        주요제품 : {{data.4}} <br>
+                        상장일 : {{data.5}} <br>
+                        결산월 : {{data.6}} <br>
+                        대표자명 : {{data.7}} <br>
+                        홈페이지 : <a href="{{data.8}}">{{data.8}}</a> <br>
+                        지역 : {{data.9}} <br>
+                  </div>
+
+            </div>
+
+      </div>
+
+      <canvas id="myChart" width="1000" height="400 px"></canvas>
+
+
+      <form id="dates" method="post">
+            <div class="row">
+                  <div class="col-sm">
+                        <label>기간설정:</label>
+                  </div>
+                  <div class="row">
+                        <div class="form-group mx-auto">
+                              <div class='input-group date' id='startinterval'>
+                                    <input id="start" type='text' class="form-control" placeholder="시작" />
+                                    <span class="input-group-addon">
+                                          <span class="fa fa-calendar"></span>
+                                    </span>
+                              </div>
+                        </div>
+                        <div class="form-group mx-auto">
+                              <div class='input-group date' id='endinterval'>
+                                    <input id="end" type='text' class="form-control" placeholder="종료" />
+                                    <span class="input-group-addon">
+                                          <span class="fa fa-calendar"></span>
+                                    </span>
+                              </div>
+                        </div>
+
+                  </div>
+      </form>
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+{% endblock %}

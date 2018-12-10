@@ -1,0 +1,143 @@
+{% extends "stock/base.html" %}
+{% load wiki_tags %}
+
+{% block wiki_pagetitle %}home{% endblock %}
+
+{% block wiki_contents %}
+
+<div>
+
+      <form class="form-inline mt-2 mt-md-0 mx-auto" method="GET" action="{% url 'stock-search' %}">
+            <div class="mx-auto text-center">
+                  <input class="form-control mr-sm-2 search" type="text" name="q" placeholder="종목명 or 종목코드" autocomplete="off" 
+                        {% if keyword %} 
+                  value="{{ keyword }}" 
+                  {% endif %} >
+                  <button class="btn btn-dark my-2" type="submit">검색</button>
+                  <ul class="suggestions" ></ul>
+            </div>
+      </form>
+
+      
+
+
+      <table class="table">
+            <thead>
+                  <tr>
+                        <th>
+                              종목코드
+                        </th>
+                        <th>
+                              종목명
+                        </th>
+
+                        <th>
+                              주가(12개월)
+                        </th>
+                  </tr>
+            </thead>
+            <tbody>
+                  {% for item in file_content %}
+                  <tr>
+
+                        <td>{{ item.2 }}</td>
+                        <td><a href="{% url 'stock-detail' ticker_id=item.0 %}">{{ item.1 }}</a></td>
+
+                        <td>
+                              -
+                        </td>
+
+                  </tr>
+                  {% endfor %}
+            </tbody>
+      </table>
+      {% if file_content.has_previous or file_content.has_next %}
+      <div class="pagination text-xs-center">
+            <span class="step-links">
+                  {% if file_content.has_previous %}
+                  <a href="?page=1" class="btn btn-primary btn-sm mb-4"><span class="fa fa-fast-backward"></span></a>
+                  <a href="?page={{ file_content.previous_page_number }}" class="btn btn-primary btn-sm mb-4"><span
+                              class="fa fa-step-backward"></span></a>
+                  {% else%}
+                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-fast-backward"></span></a>
+                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-step-backward"></span></a>
+                  {% endif %}
+
+                  {% for num in file_content.paginator.page_range %}
+                  {% if file_content.number == num %}
+                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled">{{ num }}</a>
+                  {% elif num > file_content.number|add:'-7' and num < file_content.number|add:'7' %} 
+                  <a href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+                        class="btn btn-outline-primary btn-sm mb-4">{{ num }}</a>
+                  {% endif %}
+                  {% endfor %}
+
+                  {% if file_content.has_next %}
+                  <a href="?page={{ file_content.next_page_number }}" class="btn btn-primary btn-sm mb-4"><span
+                              class="fa fa-step-forward"></a>
+                  <a href="?page={{ file_content.paginator.num_pages }}" class="btn btn-primary btn-sm mb-4"><span
+                              class="fa fa-fast-forward"></a>
+                  {% else%}
+                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-step-forward"></a>
+                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-fast-forward"></a>
+                  {% endif %}
+            </span>
+      </div>
+      {% endif %}
+
+</div>
+{% endblock %}
+
+{% block jquery %}
+<script>
+  const endpoint = "{% url 'api-stocklist-data' %}";
+  const companies = [];
+  console.log('endpoint:', endpoint);
+
+  $.ajax({
+    type: "GET",
+    url: endpoint,
+    success: function (data) {
+      console.log("success")
+      companies.push(...data)
+    },
+    error: function (error_data) {
+      console.log("error")
+      console.log('url:', url)
+      console.log(error_data)
+    }
+  });
+
+  function findMatches(wordToMatch, companies) {
+    return companies.filter(place => {
+      const regex = new RegExp(wordToMatch, 'gi');
+      return place.name.match(regex) || place.ticker.match(regex)
+    });
+  }
+
+  function displayMatches() {
+    if (this.value == '') {
+      suggestions.innerHTML = ''
+    } else {
+      const matchArray = findMatches(this.value, companies).slice(0, 10);
+      const html = matchArray.map(place => {
+        const regex = new RegExp(this.value, 'gi');
+        const companyName = place.name.replace(regex, `<span class ="">${this.value.toUpperCase()}</span>`);
+        const tickerNumber = place.ticker.replace(regex, `<span class ="">${this.value}</span>`);
+        return `
+            <li><a class="btn btn-block text-left" href="{% url 'stock-detail' ticker_id=12345 %}">
+              <span class="name"> ${companyName}, ${tickerNumber}</span>
+              </a>
+            </li>`.replace(/12345/, place.id.toString());
+      }).join('');
+      suggestions.innerHTML = html;
+    }
+  }
+
+  const searchInput = document.querySelector('.search');
+  const suggestions = document.querySelector('.suggestions');
+
+//   searchInput.addEventListener('change', displayMatches);
+  searchInput.addEventListener('keyup', displayMatches);
+</script>
+{% endblock %}

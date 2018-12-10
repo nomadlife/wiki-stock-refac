@@ -1,0 +1,79 @@
+{% extends "stock/base.html" %}
+{% load wiki_tags static %}
+
+{% block wiki_pagetitle %}home{% endblock %}
+
+{% block wiki_contents %}
+<div class="col-12 text-center mb-2">
+</div>
+<form class="form-inline mt-2 mt-md-0" method="GET" action="{% url 'stock-search' %}">
+
+    <!-- <div class="input-group mx-auto">
+        <input type="text" class="form-control search" name="q" placeholder="종목명 or 종목코드" autocomplete="off">
+        <span class="input-group-btn">
+             <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
+        </span>
+        <ul class="suggestions"></ul>
+      </div> -->
+
+  <div class="mx-auto text-center">
+    <input class="form-control mr-sm-2 search" type="text" name="q" placeholder="종목명 or 종목코드" autocomplete="off">
+    <button class="btn btn-dark my-2" type="submit"><span class="fa fa-search"></span></button>
+    <ul class="suggestions"></ul>
+  </div>
+</form>
+{% endblock %}
+
+{% block jquery %}
+<script>
+  const endpoint = "{% url 'api-stocklist-data' %}";
+  const companies = [];
+  console.log('endpoint:', endpoint);
+
+  $.ajax({
+    type: "GET",
+    url: endpoint,
+    success: function (data) {
+      console.log("success")
+      companies.push(...data)
+    },
+    error: function (error_data) {
+      console.log("error")
+      console.log('url:', url)
+      console.log(error_data)
+    }
+  });
+
+  function findMatches(wordToMatch, companies) {
+    return companies.filter(place => {
+      const regex = new RegExp(wordToMatch, 'gi');
+      return place.name.match(regex) || place.ticker.match(regex)
+    });
+  }
+
+  function displayMatches() {
+    if (this.value == '') {
+      suggestions.innerHTML = ''
+    } else {
+      const matchArray = findMatches(this.value, companies).slice(0, 10);
+      const html = matchArray.map(place => {
+        const regex = new RegExp(this.value, 'gi');
+        const companyName = place.name.replace(regex, `<span class ="">${this.value.toUpperCase()}</span>`);
+        const tickerNumber = place.ticker.replace(regex, `<span class ="">${this.value}</span>`);
+        return `
+            <li><a class="btn btn-block text-left" href="{% url 'stock-detail' ticker_id=12345 %}">
+              <span class="name"> ${companyName}, ${tickerNumber}</span>
+              </a>
+            </li>`.replace(/12345/, place.id.toString());
+      }).join('');
+      suggestions.innerHTML = html;
+    }
+  }
+
+  const searchInput = document.querySelector('.search');
+  const suggestions = document.querySelector('.suggestions');
+
+  // searchInput.addEventListener('change', displayMatches);
+  searchInput.addEventListener('keyup', displayMatches);
+</script>
+{% endblock %}

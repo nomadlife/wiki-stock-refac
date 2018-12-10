@@ -1,0 +1,56 @@
+{% extends "wiki/base.html" %}
+{% load wiki_tags i18n sekizai_tags %}
+
+
+{% block wiki_pagetitle %}{% trans "삭제된 문서" %}{% endblock %}
+
+{% block wiki_contents %}
+  <style type="text/css">
+    label[for=id_confirm] {
+      float: left;
+      margin-right: 10px;
+    }
+  </style>
+  <h1 class="page-header">{% trans "삭제된 문서" %}</h1>
+
+  <p class="lead">
+  {% trans "삭제된 문서 목록" %}
+  </p>
+
+  <div class="row">
+
+  {% if not article.current_revision.locked or article|can_delete:user %}
+    <div class="col-lg-6">
+      <div class="well">
+        <h2>{% trans "복원" %}</h2>
+        <p>{% trans "문서를 복원합니다(하위문서 포함)" %}</p>
+        <p>
+          <a href="?restore=1" class="btn btn-default">
+            <span class="fa fa-repeat"></span>
+            {% trans "복원" %}
+          </a>
+        </p>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if article|can_moderate:user %}
+    <div class="col-lg-6">
+      <div class="well">
+        <h2>{% trans "완전 삭제" %}</h2>
+        <p>{% trans "하위문서를 포함한 현재문서를 완전히 삭제합니다. 이 작업은 다시 되돌릴 수 없습니다." %}</p>
+        <form method="POST" class="form form-inline">
+          {% csrf_token %}
+          {% wiki_form purge_form %}
+            <button class="btn btn-default">
+              <span class="fa fa-remove"></span>
+              {% trans "완전삭제" %}
+            </button>
+        </form>
+      </div>
+    </div>
+  {% endif %}
+
+  </div>
+
+{% endblock %}

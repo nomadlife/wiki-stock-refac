@@ -1,0 +1,39 @@
+{% extends "wiki/base.html" %}
+{% load i18n wiki_tags sekizai_tags %}
+
+{% block wiki_pagetitle %}로그인{% endblock %}
+
+{% block wiki_contents %}
+
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6">
+    <h1 class="page-header">로그인</h1>
+    <form method="POST" class="form-horizontal">
+    {% wiki_form form %}
+    <div class="form-group form-actions">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-10">
+        <button type="submit" name="save_changes" class="btn btn-primary btn-lg">
+          <span class="fa fa-lock"></span>
+          로그인 
+        </button>
+      </div>
+    </div>
+    </form>
+
+    <p>
+      계정이 없으세요? <a href="{% url 'wiki:signup' %}"> 등록 &raquo;</a>
+    </p>
+
+  </div>
+  <div class="col-lg-3"></div>
+</div>
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+  $('#id_username').focus();
+</script>
+{% endaddtoblock %}
+
+{% endblock %}

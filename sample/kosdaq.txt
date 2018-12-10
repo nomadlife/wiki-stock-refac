@@ -1,0 +1,958 @@
+067290.KQ	JW Shinyak Corporation
+126600.KQ	KOPLA CO.,LTD.
+122870.KQ	YG Entertainment Inc.
+088290.KQ	Ewon Comfortech Co. Ltd.
+069510.KQ	ESTec Corporation
+057880.KQ	Topfield Co., Ltd.
+037460.KQ	Samji Electronics Co., Ltd.
+036540.KQ	SFA Semicon Co., Ltd.
+032500.KQ	Kmw Inc.
+950130.KQ	Access Bio, Inc.
+222800.KQ	SIMMTECH
+171120.KQ	Lion Chemtech Co., Ltd.
+150840.KQ	IntroMedic Co., Ltd.
+143240.KQ	SaraminHR Co.,LTD
+141080.KQ	LegoChem Biosciences, Inc.
+121890.KQ	SD System Co., Ltd.
+121800.KQ	Seven Star Works Co., Ltd.
+121440.KQ	Golfzonyouwonholdings Co., Ltd.
+104830.KQ	Wonik Materials Co., Ltd.
+104200.KQ	Bugs Corporation
+102210.KQ	Haeduk Powerway Co., Ltd.
+101240.KQ	CQV Co., Ltd.
+099440.KQ	SMEC Co., Ltd.
+099190.KQ	i-SENS, Inc.
+098660.KQ	STO Co., Ltd.
+097780.KQ	SMAC Co.,Ltd.
+093920.KQ	SEOWONINTECH Co. LTD
+091440.KQ	Telefield Inc.
+090730.KQ	SIMPAC METALLOY Co., Ltd.
+090460.KQ	BH Co.,Ltd.
+089010.KQ	Chemtronics Co., Ltd.
+085660.KQ	CHA Biotech Co., Ltd.
+083650.KQ	BHI Co., Ltd.
+083470.KQ	K.J. Pretech Co. Ltd.
+081580.KQ	Sungwoo Electronics Co., Ltd.
+081150.KQ	Tplex Co., Ltd.
+080420.KQ	InnoChips Technology Co., Ltd.
+080000.KQ	Snu Precision Co Ltd
+079950.KQ	INVENIA Co., Ltd.
+078130.KQ	Kukil Paper Mfg. Co.,Ltd.
+078020.KQ	EBEST Investment & Securities Co., Ltd.
+068930.KQ	Digital Daesung Co., Ltd.
+068790.KQ	DMS Co., Ltd.
+068760.KQ	Celltrion Pharm Inc.
+068270.KQ	Celltrion, Inc.
+068050.KQ	Pan Entertainment Co Ltd
+067000.KQ	JoyCity Corporation
+065940.KQ	KSCB Co.,Ltd.
+065680.KQ	UJU Electronics Co., Ltd.
+065510.KQ	Huvitz Co. Ltd.
+060720.KQ	KHVATEC Co., Ltd.
+060590.KQ	CTCBIO., Inc.
+060540.KQ	System and Application Technologies Co., Ltd.
+060230.KQ	exax Inc.
+058820.KQ	CMG Pharmaceutical CO.,LTD.
+058630.KQ	Mgame Corp.
+057030.KQ	YBM Net, Inc.
+056190.KQ	SFA Engineering Corporation
+056000.KQ	Cowon Systems, Inc.
+054800.KQ	IDIS Holdings Co., Ltd.
+054540.KQ	Samyoung M-Tek Co. Ltd.
+054090.KQ	Samjin LND Co., Ltd.
+053160.KQ	FreeMs Corporation
+052300.KQ	SH Holdings Co., Ltd.
+051370.KQ	Interflex Co., Ltd.
+049120.KQ	Fine DNC Co. Ltd.
+048550.KQ	SM Culture & Contents Co., Ltd.
+046440.KQ	KGMobilians Co., Ltd.
+045890.KQ	Dongbu Lightec Co., Ltd.
+044960.KQ	Eagle Veterinary Technology Co. Ltd.
+044490.KQ	Taewoong Co. Ltd.
+044340.KQ	Winix Inc.
+043610.KQ	KT Music Corporation
+041510.KQ	S.M. Entertainment Co., Ltd.
+041460.KQ	Korea Electronic Certification Authority, Inc.
+041020.KQ	Infraware, Inc.
+040610.KQ	SG&G Corporation
+039030.KQ	EO Technics Co., Ltd.
+038880.KQ	iA, Inc.
+038620.KQ	Wiz Information Technology Co., Ltd.
+038060.KQ	Lumens Co., Ltd.
+038010.KQ	Jeil Technos Co. Ltd.
+037370.KQ	EG Corporation
+036830.KQ	Soulbrain Co.,Ltd.
+036710.KQ	Simmtech Holdings Co., Ltd.
+036670.KQ	KCI Limited
+036220.KQ	Infopia Co., Ltd.
+036190.KQ	Geumhwa Plant Service & Construction Co., Ltd.
+036010.KQ	ABCO Electronics Co., Ltd.
+035900.KQ	JYP Entertainment Corporation
+035610.KQ	Solborn, Inc.
+034940.KQ	ChoA Pharmaceutical Co. Ltd.
+032800.KQ	Fantagio Corp.
+031860.KQ	A-motion Co., Ltd.
+030530.KQ	Wonik Holdings Co., Ltd.
+026040.KQ	Romanson Co., Ltd.
+025270.KQ	Busan Textile Co. Ltd.
+024840.KQ	KB Metal Co., Ltd.
+023460.KQ	CNH Co., Ltd.
+022100.KQ	Posco ICT Company Ltd.
+016600.KQ	Q Capital Partners Co., Ltd.
+013120.KQ	Dong Won Development Co., Ltd.
+012620.KQ	Wonil Special Steel Co. Ltd.
+011560.KQ	Sebo Manufacturing Engineering Corp.
+010280.KQ	Ssangyong Information & Communications Corp.
+009620.KQ	Sambo Industrial Co., Ltd.
+007770.KQ	Hanil Chemical Industrial Co. Ltd.
+006910.KQ	Bosung Power Technology Co., Ltd.
+003800.KQ	Ace Bed Co., Ltd.
+014200.KQ	KANGLIM Co., Ltd.
+136540.KQ	WINS Co.,LTD
+092040.KQ	Amicogen,Inc.
+083660.KQ	CSA Cosmic Co., Ltd.
+033130.KQ	Digital Chosun Inc.
+093190.KQ	Bixolon Co., Ltd
+068060.KQ	KCW Corporation Co.Ltd.
+059100.KQ	i-Components Co.,Ltd.
+025880.KQ	KC Feed Co., Ltd.
+226440.KQ	DONGBU SPAC III
+200710.KQ	ADTechnology
+054210.KQ	Elentec Co., Ltd.
+033100.KQ	Cheryong Electric Co.,Ltd.
+106240.KQ	Finetechnix Co.,Ltd.
+025770.KQ	Korea Information & Communications Co., Ltd.
+024830.KQ	Sewon Corporation
+038070.KQ	Seoulinbioscience Co. Ltd.
+025900.KQ	Dongwha Enterprise Co., Ltd.
+013720.KQ	Cheong Bo Industrial Co., Ltd.
+087220.KQ	Steel Flower Co.,Ltd.
+021045.KQ	DaeHo P&C Co.,Ltd.
+023600.KQ	Sambo Corrugated Board Co., Ltd.
+232140.KQ	YIKC
+045100.KQ	Hanyang ENG Co., Ltd.
+066700.KQ	Theragen Etex Co.,Ltd.
+015750.KQ	Sungwoo Hitech Co., Ltd.
+217620.KQ	Hanwha ACPC SPAC
+056090.KQ	U&I
+039020.KQ	EAGON Windows & Doors Co., Ltd.
+048870.KQ	Core Logic Inc.
+082210.KQ	Optrontec Inc.
+115180.KQ	Qurient
+101170.KQ	Woorim Machinery Co., Ltd.
+097800.KQ	WINPAC Inc.
+046970.KQ	WOORIRO Co., Ltd.
+215360.KQ	W.I.C
+115440.KQ	Woori-Net Inc.
+205100.KQ	XM
+193250.KQ	YJM Games
+122640.KQ	YEST
+219960.KQ	Yuanta 2 SPAC
+115960.KQ	YONWOO
+138360.KQ	ACT Co., Ltd.
+215090.KQ	Eugene ACPC SPAC2
+235010.KQ	HI AI 1 SPAC
+196170.KQ	Alteogen
+117670.KQ	Alphachips Inc.
+123750.KQ	Alton Sports Co., Ltd.
+065660.KQ	ANTEROGEN
+121600.KQ	ANP
+094170.KQ	DONGWOON ANATECH
+211270.KQ	APSI
+054620.KQ	Advanced Process Systems Corporation
+127710.KQ	ASIA BUSINESS DAILY
+067390.KQ	ASTK
+900110.KQ	East Asia Holdings Investment Limited
+090470.KQ	Jastech, Ltd.
+224110.KQ	ATEC T&
+182400.KQ	ATGen
+950110.KQ	SBI AXES Co., Ltd.
+200780.KQ	BCWORLDPHARM
+208710.KQ	BIOLOG DEVICE
+217730.KQ	KANGSTEM BIOTECH
+060900.KQ	L Energy CO., Ltd.
+207760.KQ	Mr. Blue
+008470.KQ	BOOSTER
+206640.KQ	Boditech
+225530.KQ	BoKwang Industry
+049180.KQ	Cellumed Co., Ltd.
+053300.KQ	The Korea Information Certificate Authority, Incorporated
+900120.KQ	CKH
+221610.KQ	Hansol CNP
+900250.KQ	Crystal New Material
+225650.KQ	Cuchen
+160980.KQ	CYMECHS
+196490.KQ	DA Technology Co.,Ltd.
+215480.KQ	TOEBOX KOREA
+215580.KQ	DAEWOO SPAC 3
+140520.KQ	DaeChang Steel Co., Ltd.
+217270.KQ	Neptune
+113810.KQ	Dgenx Co., Ltd.
+049520.KQ	DK UIL Co., Ltd.
+230490.KQ	DONGBU SPAC IV
+192080.KQ	DoubleUGames
+187220.KQ	DTNC
+213420.KQ	DUK SAN NEOLUX
+225440.KQ	EBEST SPAC3
+217600.KQ	CHEMON
+173940.KQ	FNC Entertainment Co., Ltd.
+223310.KQ	ESV
+221200.KQ	EUGENE SPAC III
+092870.KQ	EXICON
+185490.KQ	Eyegene
+033290.KQ	Cowell Fashion Co., Ltd.
+189690.KQ	FORCS
+215100.KQ	Hana Must Fourth SPAC
+192410.KQ	Gamma Nu Inc.
+194510.KQ	PATI Games Corporation
+063080.KQ	GAMEVIL Inc.
+142280.KQ	GCMS
+187420.KQ	GenoFocus
+217190.KQ	Genesem
+049080.KQ	GigaLane Co., Ltd.
+130740.KQ	TPC Global
+206660.KQ	Goldenbridge SPAC 2
+219580.KQ	Goldenbridge SPAC III
+215000.KQ	GOLFZON
+227950.KQ	Goldenbridge SPAC 4
+208370.KQ	SELVAS Healthcare
+215380.KQ	WOOJUNG BSC
+076610.KQ	Haesung Optics Co., Ltd.
+214680.KQ	DRTECH
+219860.KQ	HA SPAC 2
+208870.KQ	Hana Must Third SPAC
+900090.KQ	China HaoRan Recycling Company Limited
+230240.KQ	Hana Financial Seventh SPAC
+218150.KQ	Hana Must 5th SPAC
+214870.KQ	HDPRO
+010240.KQ	Heungkuk Metaltech Co., Ltd.
+200470.KQ	HISEM
+221840.KQ	HIZEAERO
+149980.KQ	Hironic
+217500.KQ	HI-3 SPAC
+900180.KQ	Wanli International Holdings Limited
+900080.KQ	S&C Engine Group Limited
+900130.KQ	Wayport (H.K.) Co. Ltd.
+226340.KQ	HMCIBNo.3SPAC
+094840.KQ	Suprema HQ Inc.
+200670.KQ	Humedix
+221950.KQ	KB 3rd SPAC
+145020.KQ	Hugel
+170030.KQ	Hyundai Industrial Co., Ltd.
+189980.KQ	Hyungkuk F&B
+226360.KQ	KB 4th SPAC
+230980.KQ	Soltworks
+225430.KQ	IBKS No.3 SPAC
+068940.KQ	ICK Co., Ltd.
+143160.KQ	IDIS
+220630.KQ	Haimarrow
+226350.KQ	IMTECH
+114810.KQ	Iones Co., Ltd.
+124500.KQ	ITCEN
+225570.KQ	NAT GAMES
+214270.KQ	FSN
+208640.KQ	Thumbage
+222390.KQ	KB No.8 SPAC
+232270.KQ	KB No.9 SPAC
+208350.KQ	JS.
+221980.KQ	KDCHEM
+093320.KQ	KINX
+226850.KQ	Kiwoom No.4 SPAC
+218710.KQ	Kiwoom No.3 SPAC
+067570.KQ	NVH Korea Inc.
+192440.KQ	Spigen Korea Co., Ltd
+071850.KQ	CASTEC KOREA Co., Ltd.
+102940.KQ	Kolon Life Science Inc.
+224060.KQ	KODI-M
+222080.KQ	CIS
+050540.KQ	MPC Ltd.
+092070.KQ	DNF Co.,Ltd.
+046310.KQ	BG T&A Co., Ltd.
+024910.KQ	Kyungchang Industrial Co. Ltd.
+008370.KQ	Wonpoong Corporation
+065530.KQ	KRTnet Corp.
+053950.KQ	Kyung Nam Pharm Co., Ltd.
+080010.KQ	eSANG Networks Co., Ltd.
+091590.KQ	Nam Hwa Construction Co. Ltd.
+013310.KQ	A-JIN INDUSTRY
+064240.KQ	homecast Co., Ltd.
+045060.KQ	Okong Corp.
+104480.KQ	TK CHEMICAL
+052220.KQ	iMBC Co., Ltd.
+005990.KQ	Maeil Dairies Co., Ltd.
+078070.KQ	Ubiquoss Inc.
+002290.KQ	Samil Enterprise Co. Ltd.
+060560.KQ	Home Center Co., Ltd.
+138690.KQ	LIS Co., Ltd.
+101390.KQ	IM CO., LTD.
+091580.KQ	Sangsin Energy Display Precision Co.,Ltd.
+052260.KQ	Bioland Co., Ltd
+109080.KQ	Opticis Co., Ltd
+021650.KQ	Cubic Korea Inc.
+014470.KQ	Bubang Co., Ltd.
+046390.KQ	Samhwa Networks Co. Ltd.
+075130.KQ	Plantynet Co., Ltd.
+027830.KQ	Daesung Private Equity, Inc.
+133750.KQ	MegaMD
+042520.KQ	Hans Biomed Corporation
+051780.KQ	CURO HOLDINGS Co., Ltd.
+080520.KQ	OD Tech Co., Ltd.
+015710.KQ	Kocom Co., Ltd.
+039240.KQ	Kyeong Nam Steel Co., Ltd.
+052190.KQ	Softmax Co.,Ltd.
+194610.KQ	Woosung I.B. Co., Ltd.
+080470.KQ	Sungchang Autotech Co., Ltd.
+028150.KQ	GS Home Shopping Inc.
+119850.KQ	GnCenergy Co.,Ltd
+039200.KQ	Oscotec Inc.
+177830.KQ	Pavonine Co., Ltd.
+012790.KQ	Shinil Pharmaceutical Co., Ltd.
+084650.KQ	LabGen
+222980.KQ	Mcnulty
+017000.KQ	SHINWON Construction co.,Ltd.
+050110.KQ	CammSys Corp.
+204440.KQ	Daewoo Special Purpose Acquisition 2 Co., Ltd.
+066910.KQ	Sonokong Co.,Ltd.
+033790.KQ	Seohwa Telecom Co.
+035200.KQ	PlumbFast Co., Ltd.
+080530.KQ	KODI-S Co., Ltd.
+023760.KQ	Han Kook Capital Co. Ltd.
+141070.KQ	MAXROTEC Co., Ltd.
+131090.KQ	Secuve Co., Ltd.
+030190.KQ	NICE Information Service Co., Ltd.
+043650.KQ	Kooksoondang Brewery Co.,Ltd.
+065770.KQ	CS Corporation
+061970.KQ	LB Semicon Inc.
+038950.KQ	Fine Digital Inc.
+205470.KQ	HI Special Purpose Acquisition Company II
+191420.KQ	TegoScience Inc.
+039440.KQ	STI Co., Ltd.
+037230.KQ	Hankuk Package Co. Ltd.
+095340.KQ	ISC Co., Ltd.
+039420.KQ	KL-Net Corp.
+115310.KQ	Infovine Co., Ltd.
+053060.KQ	Sae Dong Co. Ltd.
+131970.KQ	Tesna Company Ltd.
+039310.KQ	Sejoong Co., Ltd.
+032820.KQ	Woori Technology, Inc.
+096690.KQ	Sewoo Tech Co.,Ltd.
+073110.KQ	LMS Co., Ltd.
+079000.KQ	Watos Corea Co Ltd
+061460.KQ	Hanjin Printing & Chemical Co., Ltd.
+086960.KQ	MDS Technology Co. Ltd.
+053870.KQ	GT&T Co. Ltd.
+038110.KQ	Ecoplastic Corporation
+036690.KQ	COMMAX Co., Ltd.
+033160.KQ	MK Electron Co. Ltd.
+019010.KQ	Grand Department Store Co. Ltd.
+119860.KQ	Danawa Co.,Ltd
+044060.KQ	Jokwang ILI Co. Ltd.
+026910.KQ	Kwang Jin Industry Co., Ltd.
+010470.KQ	Oricom Inc.
+212560.KQ	NEOOTO
+089030.KQ	TechWing, Inc.
+032080.KQ	Aztech WB Co. Ltd.
+042370.KQ	Vitzro Tech Co., Ltd.
+090360.KQ	Robostar Co., Ltd.
+078600.KQ	Daejoo Electronic Materials Co., Ltd.
+096530.KQ	Seegene, Inc.
+109860.KQ	Dongil Metal Co., Ltd.
+041190.KQ	Woori Technology Investment Co. Ltd.
+083310.KQ	LOT Vacuum Co., Ltd.
+067010.KQ	ECS Telecom Co. Ltd
+065150.KQ	MPK Group Inc.
+085910.KQ	Neo Technical System Co., Ltd.
+065690.KQ	Daejin DMP Co. Ltd.
+046890.KQ	Seoul Semiconductor Co., Ltd.
+021320.KQ	KCC Engineering & Construction Co., Ltd.
+109610.KQ	SYPANEL
+053350.KQ	INITECH Co., Ltd.
+058220.KQ	Arion Technology Inc.
+040420.KQ	JLS Co Ltd.
+094820.KQ	Iljin Power Co., Ltd.
+034950.KQ	Korea Ratings Co., Ltd.
+204630.KQ	Huayi Brothers Korea
+208140.KQ	JUNGDAWN
+050090.KQ	Phoenix Materials Co., Ltd.
+054920.KQ	Hancom Secure Inc.
+073570.KQ	AT technology Co., Ltd.
+046210.KQ	Panagene Inc.
+008800.KQ	Haengnam Chinaware Inc.
+046940.KQ	Woowon Development Co., Ltd.
+155650.KQ	Ymc Co., Ltd.
+035080.KQ	Interpark Holdings Corporation
+036630.KQ	Sejong Telecom, Inc.
+052290.KQ	Trais Co., Ltd.
+033230.KQ	Insung Information Co., Ltd
+000250.KQ	Sam Chun Dang Pharm. Co.,Ltd
+024060.KQ	HeunguOil
+060300.KQ	Redrover Co.,Ltd
+014940.KQ	Oriental Precision & Engineering Co., Ltd.
+031390.KQ	Green Cross Cell corporation
+130500.KQ	Gumho N.T Co., Ltd.
+032580.KQ	Fidelix Co., Ltd.
+041930.KQ	Dong-A Hwasung Co., Ltd.
+122690.KQ	Seojin Automotive Co.,Ltd.
+041140.KQ	Nexon GT Co., Ltd.
+086830.KQ	Shinyang Auracom Display Co.,Ltd.
+053050.KQ	GSE Co., Ltd.
+067770.KQ	Sejin T.S Co., Ltd.
+215750.KQ	M-3 SPAC
+101330.KQ	Mobase Co., Ltd.
+036120.KQ	SCI Information Service Inc.
+035460.KQ	Kisan Telecom Co., Ltd.
+024950.KQ	Samchuly Bicycle Co., Ltd
+007370.KQ	Jin Yang Pharmaceutical Co., Ltd.
+171010.KQ	Ram Technology Co., Ltd
+073070.KQ	NEXENTECH Inc.
+013810.KQ	SPECO Ltd.
+039230.KQ	soulbrain ENG Co., Ltd.
+060480.KQ	KUKIL METAL
+050320.KQ	Smart Information Technology Global
+064800.KQ	Feelingk Co. Ltd.
+151860.KQ	KG Eco Technology Services Co., Ltd.
+095500.KQ	MNTech Co., Ltd.
+170920.KQ	LTC Co., Ltd.
+182690.KQ	TerraSem
+070300.KQ	Solacia Corp.
+013030.KQ	Hy-Lok Corp.
+053260.KQ	Keum Kang Steel Co., Ltd.
+065450.KQ	Victek Co., Ltd.
+039740.KQ	Korea Information Engineering Services Co., Ltd.
+063170.KQ	Seoul Auction Co., Ltd.
+058610.KQ	SPG Co., Ltd.
+119830.KQ	ITEK Semiconductor, Inc.
+222810.KQ	NICSTECH
+032685.KQ	Softcen Co., Ltd.
+023900.KQ	Pungguk Ethanol Industrial Co.,Ltd
+067730.KQ	LOGISYS
+061040.KQ	RFTech Co.,Ltd.
+037350.KQ	Sungdo Engineering & Construction Co. Ltd.
+101670.KQ	Korea SE Corp.
+065950.KQ	Welcron Company Limited
+016920.KQ	CAS Corporation
+074430.KQ	Aminologics Co., Ltd.
+134780.KQ	Hwajin Co., Ltd.
+002230.KQ	PS TEC Co., Ltd.
+042500.KQ	Ringnet Co., Ltd.
+043910.KQ	Nature & Environment Co., Ltd.
+214450.KQ	PRP
+004650.KQ	Changhae Ethanol Co., Ltd.
+101680.KQ	HNK Machine Tool CO.,LTD.
+049720.KQ	Koryo Credit Information Co., Ltd.
+032750.KQ	SAMJIN Co., Ltd.
+111820.KQ	CHEOUM & C Co., Ltd.
+136510.KQ	Semisysco Co., Ltd
+074600.KQ	Wonik QnC Corporation
+039670.KQ	The Sports Seoul Co., Ltd.
+049550.KQ	InkTec Co., Ltd.
+036420.KQ	Jcontentree corp.
+043710.KQ	Playtech Co., Ltd.
+045970.KQ	CoAsia Holdings Co., Ltd.
+017480.KQ	Samhyun Steel Co., Ltd.
+127160.KQ	MM
+043150.KQ	Value Added Technology Co., Ltd.
+039840.KQ	DIO Corporation
+060910.KQ	PREGEN
+094860.KQ	KORNIC GLORY Co., Ltd.
+100660.KQ	Seoam Machinery Industry Company Ltd.
+065130.KQ	Top Engineering Co. Ltd.
+051160.KQ	GaeaSoft Corp.
+200130.KQ	KolmarBNH Co., Ltd.
+041590.KQ	GemVax Technology Co., Ltd.
+046140.KQ	SBS Contents Hub Co.,Ltd.
+158310.KQ	INTERBULLS
+084180.KQ	Soosung Lift Mfg. Co., Ltd.
+048910.KQ	Daewon Media Co., Ltd.
+024660.KQ	Harim Holdings Co.,Ltd.
+066270.KQ	SK Communications Co., Ltd.
+082850.KQ	Wooree ETI Co., Ltd.
+028040.KQ	PARK & OPC Co., Ltd.
+078650.KQ	Kolen Co. Ltd.
+140410.KQ	Mezzion Pharma Co.,Ltd.
+115480.KQ	CU Medical Systems, Inc.
+090740.KQ	Younyi Information & Communication Co. Ltd
+047920.KQ	C-TRI
+032850.KQ	BIT Computer Co. Ltd.
+100700.KQ	Sewoon Medical Co., Ltd
+138080.KQ	OE Solutions Co., Ltd.
+051980.KQ	Hulims Co., Ltd
+192390.KQ	Winhitech Co.,Ltd.
+122350.KQ	Samkee Automotive Co., Ltd.
+019570.KQ	Gemini Investment Corporation
+070590.KQ	Hansol Inticube Co., Ltd.
+043200.KQ	Paru Co. Ltd.
+032960.KQ	Dongil Technology Ltd.
+039980.KQ	Leenos Corp.
+090850.KQ	EZwelfare Company Ltd.
+084110.KQ	Huons Global Co Ltd.
+020180.KQ	Dashin Infomaition & Communications Co.,Ltd.
+021880.KQ	CXC Investment & Credit Capital Corporation
+042040.KQ	KPM TECH Co., Ltd.
+078860.KQ	IOKCOMPANY Co., Ltd.
+100090.KQ	Samkang M&T Co., Ltd
+094970.KQ	JMT Co.,Ltd.
+021040.KQ	DaeHo P&C Co.,Ltd.
+036810.KQ	Fine Semitech Corp.
+052900.KQ	BIEMT Co., Ltd.
+054950.KQ	Jvm Co., Ltd.
+047080.KQ	HanbitSoft, Inc.
+033600.KQ	Ezen Tech Co. Ltd.
+031310.KQ	Eyesvision Corp.
+056360.KQ	Coweaver Co., Ltd.
+032940.KQ	WONIK Co., LTD.
+047770.KQ	Codes Combine Co.,Ltd.
+012860.KQ	Daedong Co., Ltd.
+024850.KQ	PSMC Co, Ltd
+058450.KQ	ILYA Co., Ltd.
+019210.KQ	YG-1 Co., Ltd.
+039290.KQ	Infobank Corporation
+105740.KQ	DK-Lok Corporation
+026150.KQ	Tuksu Engineering & Construction Co. Ltd.
+131290.KQ	Tse Co., Ltd.
+060310.KQ	3S Korea Co. Ltd.
+064480.KQ	Bridgetec Corporation
+053450.KQ	Sekonix Co., Ltd.
+032540.KQ	TJ media Co., Ltd.
+051380.KQ	PC Direct, Inc.
+067920.KQ	IGLOO Security, Inc.
+016170.KQ	LOEN Entertainment, Inc.
+078940.KQ	Ilkyung Inc.
+033560.KQ	Bluecom Co., Ltd.
+019550.KQ	SBI Investment Korea Co., Ltd.
+053660.KQ	Hyunjin Materials Co.,Ltd.
+087730.KQ	NEPES AMC
+123570.KQ	eMnet Inc.
+018000.KQ	Unison Co. Ltd.
+032860.KQ	Steel & Resources Co.,Ltd.
+083790.KQ	CrystalGenomics, Inc.
+058470.KQ	LEENO Industrial Inc.
+052400.KQ	Kona I CO., Ltd.
+065560.KQ	Cubes, Inc.
+086980.KQ	Showbox Corp.
+095910.KQ	S-Energy Co., Ltd.
+138610.KQ	NIBEC Co. Ltd.
+046070.KQ	Kodaco Co. Ltd.
+058400.KQ	Korea New Network Co., Ltd.
+114190.KQ	Welcron Kangwon Co., Ltd.
+065440.KQ	ELUON Corporation
+067990.KQ	Deutsch Motors Inc.
+073640.KQ	Samwon Tech Co.,Ltd.
+038680.KQ	SNet Systems Inc.
+023430.KQ	IE Limited
+043360.KQ	Digital Graphics Incorporation
+041520.KQ	e-Litecom Co. Ltd.
+166480.KQ	CORESTEM
+082270.KQ	GemVax & Kael Co., Ltd.
+112040.KQ	WeMade Entertainment Co., Ltd.
+018620.KQ	WooGene B&G Co., Ltd.
+056730.KQ	Accupix Inc.
+065650.KQ	Medifron DBT Co., Ltd.
+088390.KQ	Innox Corp.
+086040.KQ	Biotoxtech Co., Ltd.
+115530.KQ	CNPLUS Co., Ltd.
+040160.KQ	NURI Telecom Co.,Ltd.
+108380.KQ	Daeyang Electric Co., Ltd.
+027580.KQ	Sangbo Co., Ltd
+053270.KQ	Guyoung Tech. Co., Ltd.
+077280.KQ	Hancom GMD Inc.
+067080.KQ	DAE HWA Pharmaceutical Co., Ltd.
+079190.KQ	EMW Co., Ltd.
+025440.KQ	Daesung Eltec Co., Ltd.
+091120.KQ	EM-Tech. Co., Ltd.
+131390.KQ	PNE Solution Co., Ltd.
+026960.KQ	Dongsuh Companies, Inc.
+030520.KQ	Hancom Inc.
+131030.KQ	HI Special Purpose Acquisition Company I
+056080.KQ	Yujin Robot Co., Ltd.
+066110.KQ	Hanp Inc.
+006140.KQ	PJ Electronics Co. Ltd.
+095190.KQ	EM KOREA Co., Ltd.
+109820.KQ	GeneMatrix Inc.
+007530.KQ	Youngsin Metal Industrial Co. Ltd.
+049950.KQ	Meerecompany Inc.
+056700.KQ	Shinwha Intertek Corporation
+043340.KQ	Essen Tech Co. Ltd.
+106080.KQ	Hysonic Co., Ltd.
+019660.KQ	Globon Co., Ltd.
+089890.KQ	Korea Semiconductor System Co., Ltd.
+024800.KQ	YooSung TNS Co., Ltd.
+178920.KQ	SKCKOLONPI, Inc.
+191410.KQ	RYUK-IL C&S
+141000.KQ	Viatron Technologies, Inc.
+099410.KQ	Dongbang Ship Machinery Co., Ltd.
+159910.KQ	MBK Co., Ltd.
+037950.KQ	Elcomtec Co., Ltd.
+160600.KQ	SNTEK
+011370.KQ	Seohan Const. & Eng. Co., Ltd.
+090710.KQ	DST Robot Co., Ltd.
+023770.KQ	Playwith, Inc.
+051490.KQ	Nara Mold & Die Co., Ltd.
+108230.KQ	Toptec Company Limited
+083930.KQ	Avaco Co., Ltd.
+072870.KQ	Megastudy Co. Ltd.
+137940.KQ	NextEye Co., Ltd.
+095610.KQ	TES Co, Ltd.
+050120.KQ	Liveplex Co. Ltd.
+044780.KQ	HK Co., Ltd.
+203650.KQ	Shinhan 2nd Special Purpose Acquisition Co., LTD.
+023890.KQ	ATLASBX Co., Ltd.
+032980.KQ	BYON Co., Ltd.
+052460.KQ	Icraft Co., Ltd.
+019540.KQ	Ilji Technology Co. Ltd.
+126880.KQ	JNK Heaters Co., Ltd.
+063570.KQ	NICE Total Cash Management Co., Ltd.
+115500.KQ	Korea Computer & Systems Inc.
+060250.KQ	NHN KCP Corp.
+192250.KQ	KSIGN Co., Ltd.
+045340.KQ	Total Soft Bank Ltd.
+038340.KQ	REGEN Co., Ltd.
+005860.KQ	Hanil Feed Co., Ltd.
+217820.KQ	NS
+048470.KQ	Daedong Steel Co., Ltd.
+033050.KQ	Jeong Moon Information. Co., Ltd.
+194480.KQ	Devsisters corporation
+204620.KQ	Yuanta 1 Special Purpose Acquisition Co., Ltd.
+085670.KQ	Newflex Technology Company Limited
+119610.KQ	Interojo Inc.
+066130.KQ	Haatz Inc.
+105550.KQ	Truwin Company Limited
+042600.KQ	Seronics Co., Ltd.
+197210.KQ	LEED
+102710.KQ	ENF Technology Co., Ltd.
+000440.KQ	Joong Ang Enervis Co.,Ltd.
+046120.KQ	Orbitech Co., Ltd.
+036930.KQ	Jusung Engineering Co. Ltd.
+073190.KQ	DBK Co., Ltd.
+032620.KQ	UBCare Co., Ltd.
+101160.KQ	Worldex Industry & Trading Co., Ltd.
+053590.KQ	Hankook Technology Inc.
+066980.KQ	Hicel Co.,Ltd.
+207930.KQ	SK No.1 SPAC
+037070.KQ	Paseco Co., Ltd.
+147830.KQ	Cheryong Industrial Co. Ltd.
+046110.KQ	Hanil Networks Co., Ltd.
+009730.KQ	KOSSEN Co., Ltd.
+052270.KQ	Woojeon Co., Ltd.
+123420.KQ	SundayToz Corporation
+001540.KQ	Ahn-Gook Pharmaceutical Co. Ltd.
+072770.KQ	Neodian Technology Co., Ltd.
+036490.KQ	SK Materials Co. Ltd.
+206560.KQ	Dexter studios
+131220.KQ	DAIHAN Scientific Co., Ltd.
+104040.KQ	Daesung Fine Tech Co., Ltd.
+022220.KQ	Jeongsan Aikang Co.,Ltd.
+064520.KQ	Barun Electronics Co. Ltd.
+036560.KQ	Young Poong Precision Corporation
+025870.KQ	SILLA SG Co., Ltd
+032680.KQ	Softcen Co., Ltd.
+051360.KQ	TOVIS Co., Ltd.
+096040.KQ	E-Tron Co., Ltd.
+032190.KQ	Daou Data Corp.
+047560.KQ	ESTsoft Corp.
+127120.KQ	DNA Link, Inc.
+114570.KQ	G-Smatt Global Co., Ltd.
+080160.KQ	MODETOUR Network Inc.
+078590.KQ	DUAL Industrial. Co., Ltd.
+137400.KQ	People & Technology Inc.
+089980.KQ	Sang-A Frontec Co., Ltd.
+036800.KQ	Nice Information & Telecommunication, Inc.
+043370.KQ	Pyeong Hwa Automotive Co., Ltd.
+126700.KQ	HyVISION SYSTEM.INC
+007390.KQ	Nature Cell Co.,Ltd.
+149940.KQ	Modacom Co., Ltd.
+063440.KQ	FNC ADD CULTURE. Co., Ltd.
+028080.KQ	Humax Holdings Co., Ltd.
+123040.KQ	MS Autotech Co., Ltd.
+049070.KQ	Intops Co., Ltd.
+187270.KQ	Shinhwa Contech Co., Ltd
+003100.KQ	Sun Kwang Co., Ltd.
+100120.KQ	Vieworks Co. Ltd.
+104540.KQ	Corentec Co., Ltd.
+019590.KQ	M-Venture Investment Inc.
+029480.KQ	BARUN Technology CO.,LTD.
+071670.KQ	A-Tech Solution Co., Ltd.
+155960.KQ	Global Display Co., Ltd.
+065620.KQ	Jenax Inc.
+203690.KQ	Prostemics Co., Ltd.
+066310.KQ	Quantum Semiconductor International Co., Ltd.
+060570.KQ	iRiver Ltd
+031330.KQ	SAMT Co., Ltd.
+036000.KQ	YeaRimDang Publishing Co., Ltd.
+038500.KQ	TONGYANG Cement & Energy Corporation
+082660.KQ	SamwooEms co., Ltd
+068240.KQ	Dawonsys Co. Ltd.
+023790.KQ	Dongil Steel Co. Ltd.
+042110.KQ	SCD Co., Ltd.
+053610.KQ	Protec Co., Ltd.
+053810.KQ	i-factory Co.,Ltd
+052860.KQ	I&C Technology Co., Ltd.
+051390.KQ	Yw Company Limited
+057540.KQ	OMNISYSTEM Co., Ltd
+051170.KQ	Suncore, Inc.
+006920.KQ	Mohenz. Co., Ltd
+014970.KQ	Samryoong Co., Ltd.
+047820.KQ	Chorokbaem Media Co., Ltd.
+114630.KQ	UNO & COMPANY Ltd.
+036030.KQ	KTHitel Co., Ltd.
+059120.KQ	Ajinextek Co, Ltd.
+140860.KQ	Park Systems
+091340.KQ	S&K Polytec Co., Ltd.
+007820.KQ	SMCore, Inc.
+213090.KQ	MIRAE TECH
+064260.KQ	Danal Co. Ltd.
+048770.KQ	TPC Mechatronics Corporation
+066670.KQ	Display Tech Co., Ltd.
+065570.KQ	Samyung ENC Co.Ltd
+045510.KQ	Zungwon En-Sys Inc.
+062860.KQ	TLi Inc.
+024880.KQ	Korea Parts & Fasteners Co., Ltd.
+054340.KQ	People & Telecommunication Inc.
+092730.KQ	Neopharm Co Ltd
+032040.KQ	C&S Corporation
+126640.KQ	Hwashin Precision Engineering Co., Ltd.
+099830.KQ	Signal Entertainment Group Corp.
+084990.KQ	ViroMed Co. Ltd.
+096640.KQ	MELFAS Inc.
+080440.KQ	Sejin Electron Inc.
+043580.KQ	Aimhigh Global Corp.
+119500.KQ	Formetal Co., Ltd.
+060150.KQ	INSUN Environmental New Technology Co., Ltd.
+217810.KQ	NH SPAC VII
+030270.KQ	KAHEE Co., LTD
+130580.KQ	Nice D&B Co., Ltd.
+004780.KQ	Daeryuk Can Co., Ltd.
+086900.KQ	Medy-Tox Inc.
+092600.KQ	NEXTCHIP Co., Ltd.
+222420.KQ	CENOTEC
+006730.KQ	Seobu T&D Co.,Ltd.
+064760.KQ	Tokai Carbon Korea Co. Ltd.
+036170.KQ	CTL Inc.
+043290.KQ	Korea Materials & Analysis Corp.
+090150.KQ	Kwang Jin Wintec Co.,Ltd.
+095270.KQ	Wave Electronics Co., Ltd.
+053290.KQ	Neungyule Education, Inc.
+050860.KQ	Asia Agricultural Machinery Co., Ltd.
+073010.KQ	KSP Co. Ltd.
+036500.KQ	SS Comtech Co., Ltd.
+037440.KQ	Heerim Architects & Planners Co., Ltd.
+065350.KQ	Shinsung Delta Tech Co., Ltd
+020400.KQ	Daedong Metals Co. Ltd.
+036180.KQ	Young in Frontier Co. Ltd.
+032790.KQ	Mgenplus Co., Ltd.
+039560.KQ	DASAN Networks Inc.
+121850.KQ	KOYJ Co., Ltd.
+064550.KQ	Bioneer Corporation
+122800.KQ	KTROLL Corporation
+005710.KQ	Daewon San Up Co. Ltd.
+011080.KQ	HYUNGJI Innovation and Creative Company Limited
+052770.KQ	YD Online Corp.
+101490.KQ	S&S TECH Corporation
+092130.KQ	E-Credible Co.,Ltd
+088130.KQ	Dong A Eltek Co., Ltd.
+128660.KQ	PJ Metal Co., Ltd.
+100130.KQ	Dongkuk Structures and Construction Co., Ltd.
+018310.KQ	S-FORM Co., Ltd.
+086670.KQ	BMT Co., Ltd.
+075970.KQ	Dongkuk Refractories & Steel Co., Ltd.
+086200.KQ	JNU Global Incorporation
+159580.KQ	Zero To Seven Inc
+009520.KQ	Posco M-Tech Co., Ltd.
+038390.KQ	RedcapTour Co., Ltd.
+064820.KQ	Cape Industries Ltd.
+089530.KQ	AT semicon Co., Ltd.
+131180.KQ	Dilli illustrate Inc.
+043090.KQ	PharmswellBio Co., Ltd.
+086450.KQ	DONGKOOK Pharmaceutical Co., Ltd.
+006050.KQ	Kuk Young G&M Co., Ltd.
+037330.KQ	INZI DISPLAY Co., Ltd
+071280.KQ	Rorze Systems Corporation
+198440.KQ	NH Special Purpose Acquisition 3 Co., Ltd.
+001840.KQ	EE-HWA Construction Co., Ltd.
+043220.KQ	Widwin Networks Corp.
+069080.KQ	Webzen Inc.
+120240.KQ	Daejung Chemicals & Metals Co., Ltd.
+215200.KQ	megastudyEdu
+067310.KQ	HANA Micron Inc.
+037400.KQ	Wooree Lighting Co., Ltd.
+050760.KQ	SPOLYTECH Co., Ltd.
+093380.KQ	Pungkang Co., Ltd.
+049630.KQ	Jaeyoung Solutec Co., Ltd.
+095300.KQ	NSV Corporation, LTD.
+030350.KQ	Dragonfly GF Co., Ltd
+099660.KQ	Hansol SeenTec Co., Ltd.
+066430.KQ	Shinhoo Co., Ltd.
+039340.KQ	Korea Business News Co. Ltd.
+095700.KQ	Genexine, Inc.
+089150.KQ	Korea Computer Terminal Inc.
+026260.KQ	Bota Bio. Co., Ltd.
+052330.KQ	Kortek Corporation
+067900.KQ	Y-Entec Co., Ltd.
+091970.KQ	Nano Chem Tech Inc.
+085370.KQ	Lutronic Corporation
+207720.KQ	NH SL SPAC
+068330.KQ	ilShinbiobase Co., Ltd.
+076080.KQ	Welcron Hantec Co., Ltd.
+139050.KQ	KyungBong Co., Ltd.
+016100.KQ	Leaders Cosmetics Co., Ltd.
+054300.KQ	Panstar Enterprise Co., Ltd.
+009300.KQ	Sam-A Pharm. Co. Ltd
+033430.KQ	Korea Resources Investment & Development, Inc.
+078140.KQ	Daebong LS CO., LTD.
+054940.KQ	EXA E&C Inc.
+214430.KQ	i3system
+038540.KQ	Texcell-NetCom Co., Ltd.
+214310.KQ	Semicon Light
+205500.KQ	Action Square Co., Ltd.
+072020.KQ	Choong Ang Vaccine Laboratory Co., Ltd.
+083450.KQ	Global Standard Technology Co., Ltd
+101000.KQ	Dongnam Marine Crane Co., Ltd.
+058110.KQ	MEKICS
+105330.KQ	KNW Co.,Ltd.
+078160.KQ	Medipost Co Ltd
+059090.KQ	MiCo Ltd.
+214150.KQ	KTB SPAC 2
+051500.KQ	CJ Freshway Corporation
+092460.KQ	Hanla IMS Co.,Ltd.
+079970.KQ	TOBESOFT Co., Ltd.
+106520.KQ	Digital Optics Co., Ltd.
+025550.KQ	Hankuk Steel Wire Co., Ltd.
+064290.KQ	INTEKPLUS Co., Ltd.
+043260.KQ	Sungho Electronics Corp.
+137950.KQ	JC Chemical Co., Ltd.
+066790.KQ	Korea Cable T.V. Chung-Buk System Co., Ltd.
+112240.KQ	SFC Co.,Ltd.
+054040.KQ	Korea Computer Inc.
+065160.KQ	Finetex EnE, Inc.
+134580.KQ	Digital Multimedia Technology Co., Ltd.
+218410.KQ	NH SPAC VIII
+059210.KQ	Meta Biomed Co., Ltd.
+079940.KQ	Gabia Inc
+096630.KQ	S Connect Co., LTD.
+204650.KQ	KTB Special Purpose Acquisition Company 1 Co., Ltd.
+115450.KQ	G-treeBNT
+236200.KQ	Suprema
+206400.KQ	Entermate Co., Ltd.
+023910.KQ	Daihan Pharmaceutical Co.,Ltd.
+017680.KQ	Deco-netishion Co., Ltd.
+039790.KQ	Winnova Co., Ltd.
+067160.KQ	AfreecaTV Co., Ltd.
+060260.KQ	Nuvotec Co. Ltd.
+042420.KQ	NEOWIZ HOLDINGS Corporation
+014100.KQ	Boryung Medience Co., Ltd.
+141020.KQ	Fortis, Inc.
+027710.KQ	FarmStory Co., Ltd.
+060370.KQ	KT Submarine Co. Ltd.
+138070.KQ	Shinjin SM Co., Ltd.
+094190.KQ	Elk Corporation
+042510.KQ	Raonsecure Co.Ltd
+024740.KQ	Hanil Forging Industrial Co. Ltd.
+036480.KQ	Daesung Microbiological Labs Co. Ltd.
+130960.KQ	CJ E&M Corporation
+038870.KQ	EcoBio Holdings Co., Ltd.
+014190.KQ	Wonik Cube Corp.
+139670.KQ	NexStreaming Corporation
+040910.KQ	ICD Co., Ltd.
+078350.KQ	Hanyang Digitech Co. Ltd.
+066410.KQ	Candle Media Co., Ltd.
+054180.KQ	ChoongAng Ocean Co., Ltd.
+033320.KQ	JC Hyun Systems, Inc.
+053110.KQ	Soribada Inc.
+098120.KQ	Micro Contact Solution Co., Ltd.
+204760.KQ	Hyundai Able 1st Special Purpose Acquisition Company
+054670.KQ	Daehan New Pharm Co., Ltd.
+097870.KQ	Hyosung ONB Co., Ltd.
+020710.KQ	Sigong Tech Co. Ltd.
+104460.KQ	DongYang P&F Co., Ltd.
+016670.KQ	Pobis TNC Co., Ltd.
+123840.KQ	Hanil Vacuum Co., Ltd.
+053700.KQ	SAMBO MOTOS Co.,Ltd.
+093520.KQ	MAKUS, Inc.
+086520.KQ	ECOPRO Co. Ltd.
+111870.KQ	Sambon Precision & Electronics Co., Ltd.
+101400.KQ	NEOFIDELITY, Inc.
+049480.KQ	Openbase Inc.
+079650.KQ	SeoSan Ltd,.Co
+089140.KQ	Nexturn Co. Ltd.
+151910.KQ	Nanos Co., Ltd.
+014620.KQ	Sung Kwang Bend Co. Ltd.
+033340.KQ	Good People Co., Ltd.
+106190.KQ	High Tech Pharm Co.,Ltd.
+053800.KQ	AhnLab, Inc.
+039830.KQ	Aurora World Corp.
+067280.KQ	Multicampus Corporation
+083550.KQ	KM Corporation
+079370.KQ	Zeus Co., Ltd.
+219550.KQ	MPHK
+149950.KQ	Avatec Co., Ltd.
+012700.KQ	The Leadcorp Inc.
+095660.KQ	NEOWIZ Games Corporation
+041910.KQ	EstechPharma Co., Ltd.
+154040.KQ	Solueta Co., Ltd.
+066620.KQ	Kukbo Design Co. Ltd.
+196700.KQ	WAPS
+084730.KQ	THINKWARE Systems Corporation
+048830.KQ	NPK Co., Ltd.
+078150.KQ	HB Technology Co., Ltd.
+058420.KQ	J way Co., Ltd.
+018680.KQ	Seoul Pharma Co. Ltd.
+089230.KQ	Yonghyun Base Materials Co., Ltd.
+019990.KQ	Enertork, Ltd.
+035890.KQ	Seohee Construction Co., Ltd.
+099320.KQ	Satrec Initiative Co., Ltd.
+131370.KQ	RSUPPORT Co., Ltd.
+065500.KQ	Orient Precision Industries Inc.
+045520.KQ	Clean & Science Co., Ltd.
+092300.KQ	Hyunwoo Industrial Co., LTD
+072520.KQ	Tae Yang C&L Co., Ltd.
+204840.KQ	IBKS No.2 Special Purpose Acquisition Company
+096610.KQ	Rfsemi Technologies Inc
+052600.KQ	Hannet Co. Ltd.
+114450.KQ	KPX Life Science Co., Ltd.
+109740.KQ	DSK Corporation
+088800.KQ	ACE Technologies Corp
+098460.KQ	Koh Young Technology Inc.
+081970.KQ	HansolNexG Co., Ltd.
+064090.KQ	Hanyang Hitao Co., Ltd.
+078340.KQ	Com2uS Corporation
+054780.KQ	Keyeast Co,.LTD
+041960.KQ	Komipharm International Co., Ltd.
+093640.KQ	TamulMultimedia,Co.,Ltd.
+048430.KQ	Yura Tech. Co., Ltd.
+039860.KQ	NanoEnTek Inc.
+060380.KQ	Dongyang S.Tec Co.,Ltd
+033110.KQ	ED Co., Ltd.
+017250.KQ	Inter-M Corporation
+084370.KQ	Eugene Technology Co., Ltd.
+037340.KQ	CLinternational Co., Ltd.
+225590.KQ	SHT-2 SPAC
+900070.KQ	Global SM Tech Limited
+180400.KQ	MG MED
+187790.KQ	NANO Co., Ltd.
+190510.KQ	NAMUGA
+160550.KQ	NEW
+126870.KQ	Neuros Co., Ltd.
+900100.KQ	New Pride Corporation
+215790.KQ	INNO INSTRUMENT
+222040.KQ	NUTRIBIOTECH
+080580.KQ	OKins
+222110.KQ	PanGen
+087010.KQ	PEPTRON
+087600.KQ	Pixelplus
+189860.KQ	SJEM
+057500.KQ	SKC solmics Co., Ltd.
+900040.KQ	China Great STAR International Limited
+219130.KQ	TigerElec
+019770.KQ	Seoyon Topmetal Co., Ltd.
+195990.KQ	Ugint
+142210.KQ	Unitrontech
+177350.KQ	Vessel
+072470.KQ	Woory Industrial Holdings Co.,Ltd.
+214370.KQ	Caregen
+175140.KQ	INFOMARK
+03663016.KQ	SEJONG TELECOM 30R
+223040.KQ	Kyobo 5 SPAC
+220260.KQ	CAPE-ES SPAC
+214180.KQ	Minwise
+131760.KQ	FINETEK
+

@@ -1,0 +1,58 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+}
+
+#wiki-search-form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.breadcrumb {
+    margin-bottom: 0px;
+}
+.navbar-custom {
+    background-color: #5f81a1;
+    border-color: #5f81a1;
+    color : #fafafa;
+}
+
+.navbar-brand {
+    color : #fafafa;
+}
+.navbar-brand:hover {
+    color : #fafafa;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+
+    background-color: #286090;
+    border-color: #337ab7;
+
+}
+
+.navbar-nav > li > a {
+    color : #fafafa;
+}
+
+/* .navbar-nav .open >a:focus {
+background-color: #286090;
+border-color: #204d74;
+} */
+
+.navbar-header > button {
+    border-color: #fafafa;
+}
+
+.navbar-header > button > .icon-bar {
+    background-color:#fafafa;
+}
+
+ul.breadcrumbs {
+    margin-bottom: 0px;
+}

@@ -1,0 +1,77 @@
+{% load i18n %}
+{% if urlpath %}
+<div id="article-breadcrumbs">
+  <div>
+    <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% spaceless %}
+      {% if article or urlpath %}
+        {% url 'wiki:search' article_id=article.id path=urlpath.path %}
+      {% else %}
+        {% url 'wiki:search' %}
+      {% endif %}
+    {% endspaceless %}"
+      style="min-width:300px;">
+      <div class="input-group">
+        <input type="search" class="form-control search-query" name="q" placeholder="{% spaceless %}
+        {% if article or urlpath %}
+           {% trans "검색" %} {% else %} {% trans "전체검색" %} {% endif %} {% endspaceless %}" />
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <span class="fa fa-search"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+    <ul class="breadcrumb pull-left">
+      <li class="active"><a href="{% url 'wiki:get' path=urlpath.parent.path %}">
+          /
+          {% with urlpath.cached_ancestors|last as item %}
+          {{ item.article|truncatechars:25 }}
+          {% endwith %}</a></li>
+      <li>
+        {% if user.is_authenticated %}
+        {% if urlpath.parent %}
+        {% if user.is_superuser or urlpath.level > 1%}
+        <a href="{% url 'wiki:create' path=urlpath.parent.path %}" style="padding: 5px;" title="{% trans " add a new
+          document in this level" %} {{ article.current_revision.title }}">
+            <em>+새문서</em>
+          </a>
+          {% endif %}
+          {% endif %}
+          {% endif %}
+    
+        </li>
+    </ul>
+  </div>
+
+<div style="clear: both">
+    <ul class="breadcrumb list-inline">
+      <li>하위문서 :</li>
+      {% for child in children_slice %}
+      <li>
+        <a href="{% url 'wiki:get' path=child.path %}">
+          {{ child.article.current_revision.title }}
+        </a>
+      </li>
+      {% empty %}
+      <li><a href="#"><em>{% trans "문서가 없습니다." %}</em></a></li>
+      {% endfor %}
+
+      {% if children_slice_more %}
+      <li><a href="#"><em>{% trans "...and more" %}</em></a></li>
+      {% endif %}
+
+      <li>
+
+      {% if user.is_authenticated %}
+      <a href="{% url 'wiki:create' path=urlpath.path %}" style="padding: 5px;" title="{% trans " Sub-articles
+          for" %} {{ article.current_revision.title }}">
+      <em>+새문서</em></a>
+      {% endif %}
+
+    </li>
+  </ul>
+</div>
+
+
+</div>
+{% endif %}
