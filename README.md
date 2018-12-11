@@ -9,7 +9,7 @@ It comes with a prepopulated SQLite database.
 
 DEMO
 -------
-nomadlife.pythonanywhere.com
+https://nomadlife.pythonanywhere.com
 
 
 Running

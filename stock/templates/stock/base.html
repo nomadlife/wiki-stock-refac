@@ -20,7 +20,7 @@
 <body>
   {% block wiki_body %}
   {% block wiki_navbar %}
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4 navbar-top-fixed">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,11 +31,11 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'stock-list' %}">목록</a>
+          <a class="nav-link" href="{% url 'stock-list' %}">목록 <span class="fa fa-list"></span></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'wiki:root' %}">위키</a>
+          <a class="nav-link" href="{% url 'wiki:root' %}">위키 <span class="fa fa-home"></span></a>
         </li>
       </ul>
       {% endblock %}

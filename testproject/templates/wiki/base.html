@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
           </button>
           {% block wiki_header_branding %}
-          <a class="navbar-brand" href="/">위키문서</a>
+          <a class="navbar-brand" title="Home" href="/"><span class="fa fa-home"></span>위키<span class="hidden-xs">문서</span></a>
           {% endblock %}
           {% block wiki_header_navlinks %}
           <ul class="nav navbar-nav">
@@ -57,7 +57,7 @@
           {% endblock %}
         </div>
 
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse pull-right">
           <div class="navbar-right">
             {% if user.is_authenticated %}
             <ul class="nav navbar-nav">

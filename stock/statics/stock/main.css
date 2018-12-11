@@ -1,5 +1,7 @@
 /* Show it is fixed to the top */
-
+/* body {
+  margin-top: 5rem;
+} */
 .navbar-inverse .navbar-nav .nav-link {
   color: #ffffffe6;
 }
@@ -49,9 +51,17 @@ table.table td{
   padding: 3px;
 }
 
-
-
 div.row > img.col {
   min-width: 400px;
 }
 
+/* @media (max-width:992px) {
+  .navbar-brand{
+    width : 59px;
+
+  }
+} */
+
+.navbar-toggler{
+  font-size: 1rem;
+}
