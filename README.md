@@ -6,9 +6,10 @@ that you have checked out the root of the Git repository.
 
 It comes with a prepopulated SQLite database.
 
+
 DEMO
 -------
-[nomadlife.pythonanywhere.com](nomadlife.pythonanywhere.com)
+nomadlife.pythonanywhere.com
 
 
 Running

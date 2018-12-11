@@ -7,19 +7,10 @@
 <div class="col-12 text-center mb-2">
 </div>
 <form class="form-inline mt-2 mt-md-0" method="GET" action="{% url 'stock-search' %}">
-
-    <!-- <div class="input-group mx-auto">
-        <input type="text" class="form-control search" name="q" placeholder="종목명 or 종목코드" autocomplete="off">
-        <span class="input-group-btn">
-             <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
-        </span>
-        <ul class="suggestions"></ul>
-      </div> -->
-
-  <div class="mx-auto text-center">
-    <input class="form-control mr-sm-2 search" type="text" name="q" placeholder="종목명 or 종목코드" autocomplete="off">
-    <button class="btn btn-dark my-2" type="submit"><span class="fa fa-search"></span></button>
-    <ul class="suggestions"></ul>
+  <div class="input-group mx-auto text-center">
+    <input class="form-control search" type="text" name="q" placeholder="종목명 or 종목코드" autocomplete="off">
+    <button class="btn btn-dark" type="submit"><span class="fa fa-search"></span></button>
+    <ul class="suggestions" style="margin-top: 40px;"></ul>
   </div>
 </form>
 {% endblock %}

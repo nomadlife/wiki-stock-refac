@@ -17,3 +17,6 @@ malwiki.ml
 pip install djangorestframework
 pip install markdown (already installed)
 pip install django-filter 
+
+pandas
+matplotlib
