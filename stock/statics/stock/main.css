@@ -25,6 +25,7 @@
 }
 
 .suggestions li{
+  width:290px;
   background: white;
   list-style: none;
   border-bottom: 1px solid #d8d8d8;
@@ -35,6 +36,14 @@
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
+}
+
+/* .suggestion-focus{
+  border-bottom: 1px solid #080808;
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+} */
+.suggestions li a:hover{
+  box-shadow: 0 0 10px rgb(255, 0, 0);
 }
 
 /* nav {
