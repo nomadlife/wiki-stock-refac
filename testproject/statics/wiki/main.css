@@ -56,3 +56,11 @@ border-color: #204d74;
 ul.breadcrumbs {
     margin-bottom: 0px;
 }
+ul.navbar-nav{
+    margin:0px;
+}
+@media(max-width:768px){
+    ul.navbar-nav>li{
+        margin-top:5px;
+    }
+}

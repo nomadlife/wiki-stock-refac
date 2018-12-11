@@ -35,6 +35,26 @@
           {% block wiki_header_branding %}
           <a class="navbar-brand" href="/">위키문서</a>
           {% endblock %}
+          {% block wiki_header_navlinks %}
+          <ul class="nav navbar-nav">
+            <li class="pull-left" title="목록"><a href="/_dir/">
+              <span class="hidden-xs">목록</span>
+              <span class="fa fa-list"></span>
+            </a></li>
+            <li class="pull-left" title="최근"><a href="{% url 'wiki:root' %}">
+              <span class="hidden-xs">최근</span>
+              <span class="fa fa-bolt"></span>
+            </a></li>
+            <li class="pull-left" title="토론"><a href="{% url 'wiki:root' %}">
+              <span class="hidden-xs">토론</span>
+              <span class="fa fa-comments-o"></span>
+            </a></li>
+            <li class="pull-left" title="주식"><a href="{% url 'stock-home' %}">
+              <span class="hidden-xs">주식</span>
+              <span class="fa fa-line-chart"></span>
+            </a></li>
+          </ul>
+          {% endblock %}
         </div>
 
         <div class="navbar-collapse collapse">
@@ -97,22 +117,7 @@
             </ul>
             {% endif %}
           </div>
-          {% block wiki_header_navlinks %}
-          <ul class="nav navbar-nav">
-            <li ><a href="/_dir/">
-              <span class="fa fa-list"></span>
-              <span class="hidden-xs"></span>목록</a></li>
-            <li ><a href="{% url 'wiki:root' %}">
-              <span class="fa fa-bolt"></span>
-              <span class="hidden-xs"></span>최근</a></li>
-            <li ><a href="{% url 'wiki:root' %}">
-              <span class="fa fa-comments-o"></span>
-              <span class="hidden-xs"></span>토론</a></li>
-            <li ><a href="{% url 'stock-home' %}">
-              <span class="fa fa-line-chart"></span>
-              <span class="hidden-xs"></span>주식</a></li>
-          </ul>
-          {% endblock %}
+          
         </div>
 
       
