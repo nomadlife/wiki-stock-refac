@@ -4,7 +4,7 @@
 {% block wiki_pagetitle %}result{% endblock %}
 
 {% block wiki_contents %}
-
+      <link rel="stylesheet" href="{% static 'stock/datepicker.css' %}">
       <div class="row">
             <h3 class="p-2"> {{ data.1 }} : {{ ticker }} </h3>
             <div class="col-6 dropdown">
@@ -19,6 +19,7 @@
                         지역 : {{data.9}} <br>
                   </div>
             </div>
+            <a class="btn btn-link" href="{% url 'stock-detail-2' ticker_id=ticker %}">차트2</a>
       </dilabelsv>
 
       <canvas id="myChart" width="1000" height="400 px"></canvas>
@@ -30,17 +31,17 @@
                   </div>
                   <div class="row">
                         <div class="form-group mx-auto">
-                              <div class='input-group date datepicker' id='startinterval'>
-                                    <input id="start" type='text' class="form-control" placeholder="시작" />
-                                    <span class="input-group-addon">
+                              <div class='input-group date' id='startinterval'>
+                                    <input id="start" type='text' class="form-control datepicker" placeholder="시작"/>
+                                    <span id="start-date" class="input-group-addon">
                                           <span class="fa fa-calendar"></span>
                                     </span>
                               </div>
                         </div>
                         <div class="form-group mx-auto">
                               <div class='input-group date' id='endinterval'>
-                                    <input id="end" type='text' class="form-control" placeholder="종료" />
-                                    <span class="input-group-addon">
+                                    <input id="end" type='text' class="form-control datepicker" placeholder="종료" />
+                                    <span id="end-date" class="input-group-addon">
                                           <span class="fa fa-calendar"></span>
                                     </span>
                               </div>
@@ -55,6 +56,7 @@
 {% endblock %}
 
 {% block jquery %}
+<script src="{% static 'stock/datepicker.js' %}"></script>
 <script>
 var ticker = "{{ticker}}"
       var data1 = []
@@ -111,6 +113,11 @@ var ticker = "{{ticker}}"
                         }]
                   },
                   options: {
+                        tooltips: {
+                              intersect : false,
+                              mode: 'index',
+                              axis: 'x'
+                        },
                         animation: false,
                         responsive: false,
                         // maintainAspectRatio: true,
@@ -118,9 +125,9 @@ var ticker = "{{ticker}}"
                               display: true,
                               position: 'top',
                         },
-                        hover: {
-                              mode: 'label'
-                        },
+                        // hover: {
+                        //       // mode: 'index',
+                        // },
                         // title: {
                         //       display: true,
                         //       text: "{{ticker}}"

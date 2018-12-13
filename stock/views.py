@@ -94,7 +94,7 @@ def stock_detail(request, ticker_id):
     context = {'data':info , 'ticker':ticker}
     return render(request, 'stock/stock_detail.html', context )
 
-def stock_detail2(request, ticker_id):
+def stock_detail_2(request, ticker_id):
     file = open(os.path.join(base.BASE_DIR, 'stock/statics/stock/alltickers_2018.csv'))
     data = [i.split(',') for i in file.readlines()]
     info = []

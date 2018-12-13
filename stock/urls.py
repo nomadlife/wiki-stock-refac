@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^search/$', views.stock_search, name='stock-search'),
 
     url(r'^detail/(?P<ticker_id>.+?)/', views.stock_detail, name='stock-detail'),
+    url(r'^detail2/(?P<ticker_id>.+?)/', views.stock_detail_2, name='stock-detail-2'),
 
     url(r'^api/test/data/',views.testapi, name='api-test-data'),
     url(r'^api/chart/data/(?P<ticker>.+?)/',views.ChartData.as_view(), name='api-chart-data'),
