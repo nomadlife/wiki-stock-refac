@@ -121,9 +121,10 @@ class ChartData(APIView):
         ticker = self.kwargs['ticker']
         print('ticker:',ticker)
         df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
-        labels = df.index.strftime('%Y-%m-%d').tolist()
-        value1 = df.y.tolist()
-        value2 = df.yhat.tolist()
+        target = df.index[df.y == 'null'][90]
+        labels = df[:target].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[:target].tolist()
+        value2 = df.yhat[:target].tolist()
         print('length:',len(value2))
         content = {
         "labels":labels,
