@@ -81,6 +81,9 @@ div.row > img.col {
   margin-right:1rem;
 }
 
+.navbar-collapse a.nav-link{
+  text-align: right;
+}
 
 .navbar-toggleable-md .navbar-nav {
   -webkit-box-orient: horizontal;
