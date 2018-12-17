@@ -1,15 +1,46 @@
 {% extends "stock/base.html" %}
 {% load static %}
 
+{% block wiki_pagetitle %}result{% endblock %}
+
+{% block wiki_contents %}
+
+<div class="row">
+      <h3 class="p-2"> {{ data.1 }} : {{ ticker }} </h3>
+      <div class="col-6 dropdown">
+            <a class="dropdown-toggle btn btn-link" data-toggle="dropdown">기업정보</a>
+            <div class="dropdown-menu col-sm " aria-expanded="false">
+                  업종 : {{data.3}} <br>
+                  주요제품 : {{data.4}} <br>
+                  상장일 : {{data.5}} <br>
+                  결산월 : {{data.6}} <br>
+                  대표자명 : {{data.7}} <br>
+                  홈페이지 : <a href="{{data.8}}">{{data.8}}</a> <br>
+                  지역 : {{data.9}} <br>
+            </div>
+      </div>
+
+</div>
+
+<div id="chartdiv" style="width:100%; height:500px;"></div>
+
+
+
+{% endblock %}
+
 {% block jquery %}
-<script src="//www.amcharts.com/lib/4/core.js"></script>
-<script src="//www.amcharts.com/lib/4/charts.js"></script>
-<script src="//www.amcharts.com/lib/4/maps.js"></script>
+
+<script src="{% static 'stock/amcharts4/core.js' %}"></script>
+<script src="{% static 'stock/amcharts4/charts.js' %}"></script>
+<script src="{% static 'stock/amcharts4/themes/animated.js' %}"></script>
+
 <script>
       var ticker = "{{ticker}}"
       var data1 = []
       var data2 = []
       var labels = []
+      var result = []
+
 
       $.ajax({
             type: "GET",
@@ -17,10 +48,13 @@
             success: function (data) {
                   console.log("success")
                   labels = data.labels
-                  data1 = data.value1
-                  data2 = data.value2
+                  value1 = data.value1
+                  value2 = data.value2
+
+                  labels.forEach((labels, i) => result.push({"date":labels, "value":value1[i]}));
+                  console.log(data);
                   
-                  setChart()
+                  drawChart(data)
             },
             error: function (error_data) {
                   console.log("error")
@@ -29,141 +63,68 @@
             }
       });
 
-      function setChart() {
-            var ctx = document.getElementById("myChart");
-            var myChart = new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                        labels: labels,
-                        datasets: [{
-                              label: '종가',
-                              data: data1,
-                              fill: false,
-                              lineTension: 0,
-                              borderColor: 'rgba(255,99,132,1)',
-                              borderWidth: 1,
-                              // showLine: false,
-                              pointRadius: 0,
-                              // pointBackgroundColor: [],
-                              // pointBorderColor: [],
-                        },
-                        {
-                              label: '예측',
-                              data: data2,
-                              fill: false,
-                              lineTension: 0,
-                              borderColor: 'rgba(75, 192, 192, 1)',
-                              borderWidth: 1,
-                              // showLine: false,
-                              pointRadius: 1,
-                              // pointBackgroundColor: [],
-                              // pointBorderColor: [],
-                        }]
-                  },
-                  options: {
-                        animation: false,
-                        responsive: false,
-                        // maintainAspectRatio: true,
-                        legend: {
-                              display: true,
-                              position: 'top',
-                        },
-                        hover: {
-                              mode: 'label'
-                        },
-                        title: {
-                              display: true,
-                              text: "{{ data.1 }} : {{ ticker }}"
-                        },
-                  }
-            })
-      }
+      function drawChart(data){ // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  // Create chart instance
+  var chart = am4core.create("chartdiv", am4charts.XYChart);
+      console.log('check');
+
+  // Add data
+  chart.data = data;
+console.log('check2:',data);
+
+  // Create axes
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  var series = chart.series.push(new am4charts.LineSeries());
+  series.dataFields.valueY = "labels";
+  series.dataFields.dateX = "value1";
+  series.tooltipText = "{value}"
+  series.strokeWidth = 2;
+  series.minBulletDistance = 15;
+
+  // Drop-shaped tooltips
+  series.tooltip.background.cornerRadius = 20;
+  series.tooltip.background.strokeOpacity = 0;
+  series.tooltip.pointerOrientation = "vertical";
+  series.tooltip.label.minWidth = 40;
+  series.tooltip.label.minHeight = 40;
+  series.tooltip.label.textAlign = "middle";
+  series.tooltip.label.textValign = "middle";
+
+  // Make bullets grow on hover
+  var bullet = series.bullets.push(new am4charts.CircleBullet());
+  bullet.circle.strokeWidth = 2;
+  bullet.circle.radius = 4;
+  bullet.circle.fill = am4core.color("#fff");
+
+  var bullethover = bullet.states.create("hover");
+  bullethover.properties.scale = 1.3;
+
+  // Make a panning cursor
+  chart.cursor = new am4charts.XYCursor();
+  chart.cursor.behavior = "panXY";
+
+  // Create vertical scrollbar and place it before the value axis
+  chart.scrollbarY = new am4core.Scrollbar();
+  chart.scrollbarY.parent = chart.leftAxesContainer;
+  chart.scrollbarY.toBack();
+
+  // Create a horizontal scrollbar with previe and place it underneath the date axis
+  chart.scrollbarX = new am4charts.XYChartScrollbar();
+  chart.scrollbarX.series.push(series);
+  chart.scrollbarX.parent = chart.bottomAxesContainer;
+
+  chart.events.on("ready", function () {
+    dateAxis.zoom({ start: 0.79, end: 1 });
+  });
+  
+  }
+
 </script>
-{% endblock %}
 
-{% block wiki_pagetitle %}result{% endblock %}
-
-
-{% block wiki_contents %}
-
-<div>
-      <form class="form-inline mt-2 mt-md-0 mx-auto" method="GET" action="{% url 'stock-search' %}">
-            <div class="input-group mx-auto text-center">
-                  <input class="form-control mr-sm-2 search" type="text" name="q" placeholder="종목명 or 종목코드" autocomplete="off" 
-                        {% if keyword %} 
-                        value="{{ keyword }}" 
-                        {% endif %} >
-                  <button class="btn btn-dark" type="submit">검색</button>
-                  <ul class="suggestions" style="margin-top: 40px;"></ul>
-            </div>
-      </form>
-
-      
-
-
-      <table class="table">
-            <thead>
-                  <tr>
-                        <th>
-                              종목코드
-                        </th>
-                        <th>
-                              종목명
-                        </th>
-
-                        <th>
-                              주가(12개월)
-                        </th>
-                  </tr>
-            </thead>
-            <tbody>
-                  {% for item in file_content %}
-                  <tr>
-
-                        <td>{{ item.2 }}</td>
-                        <td><a href="{% url 'stock-detail' ticker_id=item.0 %}">{{ item.1 }}</a></td>
-
-                        <td>
-                              -
-                        </td>
-
-                  </tr>
-                  {% endfor %}
-            </tbody>
-      </table>
-      {% if file_content.has_previous or file_content.has_next %}
-      <div class="pagination text-xs-center">
-            <span class="step-links">
-                  {% if file_content.has_previous %}
-                  <a href="?page=1" class="btn btn-primary btn-sm mb-4"><span class="fa fa-fast-backward"></span></a>
-                  <a href="?page={{ file_content.previous_page_number }}" class="btn btn-primary btn-sm mb-4"><span
-                              class="fa fa-step-backward"></span></a>
-                  {% else%}
-                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-fast-backward"></span></a>
-                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-step-backward"></span></a>
-                  {% endif %}
-
-                  {% for num in file_content.paginator.page_range %}
-                  {% if file_content.number == num %}
-                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled">{{ num }}</a>
-                  {% elif num > file_content.number|add:'-7' and num < file_content.number|add:'7' %} 
-                  <a href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
-                        class="btn btn-outline-primary btn-sm mb-4">{{ num }}</a>
-                  {% endif %}
-                  {% endfor %}
-
-                  {% if file_content.has_next %}
-                  <a href="?page={{ file_content.next_page_number }}" class="btn btn-primary btn-sm mb-4"><span
-                              class="fa fa-step-forward"></a>
-                  <a href="?page={{ file_content.paginator.num_pages }}" class="btn btn-primary btn-sm mb-4"><span
-                              class="fa fa-fast-forward"></a>
-                  {% else%}
-                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-step-forward"></a>
-                  <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-fast-forward"></a>
-                  {% endif %}
-            </span>
-      </div>
-      {% endif %}
-
-</div>
 {% endblock %}

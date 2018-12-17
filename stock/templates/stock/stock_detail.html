@@ -4,35 +4,53 @@
 {% block wiki_pagetitle %}result{% endblock %}
 
 {% block wiki_contents %}
-      <link rel="stylesheet" href="{% static 'stock/datepicker.css' %}">
-      <div class="row">
-            <h3 class="p-2"> {{ data.1 }} : {{ ticker }} </h3>
-            <div class="col-6 dropdown">
-                  <a class="dropdown-toggle btn btn-link" data-toggle="dropdown">기업정보</a>
-                  <div class="dropdown-menu col-sm " aria-expanded="false">
-                        업종 : {{data.3}} <br>
-                        주요제품 : {{data.4}} <br>
-                        상장일 : {{data.5}} <br>
-                        결산월 : {{data.6}} <br>
-                        대표자명 : {{data.7}} <br>
-                        홈페이지 : <a href="{{data.8}}">{{data.8}}</a> <br>
-                        지역 : {{data.9}} <br>
-                  </div>
+<link rel="stylesheet" href="{% static 'stock/datepicker.css' %}">
+<div class="row">
+      <h3 class="p-2"> {{ data.1 }} : {{ ticker }} </h3>
+      <div class="col-6 dropdown">
+            <a class="dropdown-toggle btn btn-link" data-toggle="dropdown">기업정보</a>
+            <div class="dropdown-menu col-sm " aria-expanded="false">
+                  업종 : {{data.3}} <br>
+                  주요제품 : {{data.4}} <br>
+                  상장일 : {{data.5}} <br>
+                  결산월 : {{data.6}} <br>
+                  대표자명 : {{data.7}} <br>
+                  홈페이지 : <a href="{{data.8}}">{{data.8}}</a> <br>
+                  지역 : {{data.9}} <br>
             </div>
-            <a class="btn btn-link" href="{% url 'stock-detail-2' ticker_id=ticker %}">차트2</a>
-      </dilabelsv>
+      </div>
+      
+</div>
+<a class="btn btn-link" href="{% url 'stock-detail-amdemo' ticker_id=ticker %}">차트new_demo</a>
+<a class="btn btn-link" href="{% url 'stock-detail-am' ticker_id=ticker_id %}">차트new</a>
+{{ ticker}}
+{{ ticker_id}}
 
+<ul class="nav">
+            <li class="nav-item">
+                  <a class="btn" href="#">10년</a>
+            </li>
+            <li class="nav-item">
+                  <a class="btn" href="#">5년</a>
+            </li>
+            <li class="nav-item">
+                  <a class="btn" href="#">1년</a>
+            </li>
+            <li class="nav-item">
+                  <a class="btn" href="#">6개월</a>
+            </li>
+      </ul>
       <canvas id="myChart" width="1000" height="400 px"></canvas>
 
       <form id="dates" method="post">
             <div class="row">
                   <div class="col-sm">
-                        <label>기간설정:</label>
+                        <label>기간:</label>
                   </div>
                   <div class="row">
                         <div class="form-group mx-auto">
                               <div class='input-group date' id='startinterval'>
-                                    <input id="start" type='text' class="form-control datepicker" placeholder="시작"/>
+                                    <input id="start" type='text' class="form-control datepicker" placeholder="시작" />
                                     <span id="start-date" class="input-group-addon">
                                           <span class="fa fa-calendar"></span>
                                     </span>
@@ -49,20 +67,17 @@
                   </div>
       </form>
 
-</div>
-
-
 
 {% endblock %}
 
 {% block jquery %}
 <script src="{% static 'stock/datepicker.js' %}"></script>
 <script>
-var ticker = "{{ticker}}"
+      var ticker = "{{ticker}}"
       var data1 = []
       var data2 = []
       var labels = []
-      
+
       $.ajax({
             type: "GET",
             url: "{% url 'api-chart-data' ticker=ticker %}",
@@ -114,7 +129,7 @@ var ticker = "{{ticker}}"
                   },
                   options: {
                         tooltips: {
-                              intersect : false,
+                              intersect: false,
                               mode: 'index',
                               axis: 'x'
                         },

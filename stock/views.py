@@ -90,9 +90,24 @@ def stock_detail(request, ticker_id):
         if j[0] == ticker_id:
             info = j
     ticker = info[2].zfill(6)
-    print('check',info)
-    context = {'data':info , 'ticker':ticker}
+    context = {'data':info , 'ticker':ticker, 'ticker_id':ticker_id}
     return render(request, 'stock/stock_detail.html', context )
+
+def stock_detail_am_demo(request, ticker_id):
+    context = {'ticker':ticker_id.zfill(6)}
+    return render(request, 'stock/amchart_demo.html', context )
+
+def stock_detail_am(request, ticker_id):
+    file = open(os.path.join(base.BASE_DIR, 'stock/statics/stock/alltickers_2018.csv'))
+    data = [i.split(',') for i in file.readlines()]
+    info = []
+    for j in data:
+        if j[0] == ticker_id:
+            info = j
+    ticker = info[2].zfill(6)
+    context = {'data':info , 'ticker':ticker, 'ticker_id':ticker_id}
+    return render(request, 'stock/stock_detail_amchart.html', context )
+
 
 def stock_detail_2(request, ticker_id):
     file = open(os.path.join(base.BASE_DIR, 'stock/statics/stock/alltickers_2018.csv'))
@@ -102,9 +117,8 @@ def stock_detail_2(request, ticker_id):
         if j[0] == ticker_id:
             info = j
     ticker = info[2].zfill(6)
-    
     context = {'data':info , 'ticker':ticker}
-    return render(request, 'stock/stock_detail_amchart.html', context )
+    return render(request, 'stock/stock_detail.html', context )
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -119,13 +133,13 @@ class ChartData(APIView):
     permission_classes = []
     def get(self, request, format=None,  *args, **kwargs):
         ticker = self.kwargs['ticker']
-        print('ticker:',ticker)
+        # print('ticker:',ticker)
         df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
         target = df.index[df.y == 'null'][90]
         labels = df[:target].index.strftime('%Y-%m-%d').tolist()
         value1 = df.y[:target].tolist()
         value2 = df.yhat[:target].tolist()
-        print('length:',len(value2))
+        # print('length:',len(value2))
         content = {
         "labels":labels,
         "value1":value1,

@@ -14,7 +14,10 @@ urlpatterns = [
     url(r'^search/$', views.stock_search, name='stock-search'),
 
     url(r'^detail/(?P<ticker_id>.+?)/', views.stock_detail, name='stock-detail'),
-    url(r'^detail2/(?P<ticker_id>.+?)/', views.stock_detail_2, name='stock-detail-2'),
+    url(r'^detail_am_demo/(?P<ticker_id>.+?)/', views.stock_detail_am_demo, name='stock-detail-amdemo'),
+    url(r'^detail_am/(?P<ticker_id>.+?)/', views.stock_detail_am, name='stock-detail-am'),
+    
+    url(r'^detail_2/(?P<ticker_id>.+?)/', views.stock_detail_2, name='stock-detail-2'),
 
     url(r'^api/test/data/',views.testapi, name='api-test-data'),
     url(r'^api/chart/data/(?P<ticker>.+?)/',views.ChartData.as_view(), name='api-chart-data'),
