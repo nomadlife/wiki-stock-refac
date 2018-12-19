@@ -21,6 +21,7 @@ urlpatterns = [
 
     url(r'^api/test/data/',views.testapi, name='api-test-data'),
     url(r'^api/chart/data/(?P<ticker>.+?)/',views.ChartData.as_view(), name='api-chart-data'),
+    url(r'^api/amchart/data/(?P<ticker>.+?)/',views.amChartData.as_view(), name='api-amchart-data'),
     url(r'^api/stocklist/data/',views.stockList, name='api-stocklist-data'),
     url(r'^api/autocomplete/data/(?P<ticker>.+?)/',views.AutoComplete.as_view(), name='api-autocomplete-data'),
 

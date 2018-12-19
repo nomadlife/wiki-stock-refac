@@ -133,19 +133,36 @@ class ChartData(APIView):
     permission_classes = []
     def get(self, request, format=None,  *args, **kwargs):
         ticker = self.kwargs['ticker']
-        # print('ticker:',ticker)
         df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
         target = df.index[df.y == 'null'][90]
         labels = df[:target].index.strftime('%Y-%m-%d').tolist()
         value1 = df.y[:target].tolist()
         value2 = df.yhat[:target].tolist()
-        # print('length:',len(value2))
-        content = {
+        contents = {
         "labels":labels,
         "value1":value1,
         "value2":value2,
         }
-        return Response(content)
+        return Response(contents)
+
+class amChartData(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target = df.index[df.y == 'null'][90]
+        labels = df[:target].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[:target].tolist()
+        value2 = df.yhat[:target].tolist()
+        contents = []
+        for i in range(len(labels)):
+            contents.append({
+            "labels":labels[i],
+            "value1":value1[i],
+            "value2":value2[i],
+            })
+        return Response(contents)
 
 class AutoComplete(APIView):
     authentication_classes = []
