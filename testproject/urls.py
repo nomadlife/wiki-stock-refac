@@ -15,8 +15,11 @@ from .my_views import accounts
 
 admin.autodiscover()
 
+from stock.admin import event_admin_site
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^admin/stock', event_admin_site.urls),
     url(r'^robots.txt', lambda _: HttpResponse('User-agent: *\nDisallow: /')),
     url(r'^test1/', views.test1, name='wikitest1'),
     # url(r'^test2/', views.test2, name='wikitest2'),
