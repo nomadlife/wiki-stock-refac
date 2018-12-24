@@ -25,20 +25,21 @@ class SomeModelAdmin(admin.ModelAdmin):
         writer.writerow(field_names)
         for obj in queryset:
             row = writer.writerow([getattr(obj, field) for field in field_names])
-
         return response
     export_as_csv.short_description = "Export Selected"
-
-
+    
 
 class EventAdminSite(AdminSite):
     site_header = "Stock Site Admin"
     index_title = "Welcome to Stock Site Portal"
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        if 'delete_selected' in actions:
+            del actions['delete_selected']
+        return actions
     
 event_admin_site = EventAdminSite(name='event_admin')
 event_admin_site.register(Company, SomeModelAdmin)
 
 
-
-...
 
