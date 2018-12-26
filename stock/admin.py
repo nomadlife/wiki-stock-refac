@@ -11,6 +11,8 @@ from .models import Company
 from django.contrib.admin import AdminSite
 import csv
 from django.http import HttpResponse
+from django.urls import path
+from django.http import HttpResponseRedirect
 
 class SomeModelAdmin(admin.ModelAdmin):
     actions = ["export_as_csv"]
@@ -27,7 +29,23 @@ class SomeModelAdmin(admin.ModelAdmin):
             row = writer.writerow([getattr(obj, field) for field in field_names])
         return response
     export_as_csv.short_description = "Export Selected"
-    
+    def get_urls(self):
+        urls = super().get_urls()
+        my_urls = [
+            path('immortal/', self.set_immortal),
+            path('mortal/', self.set_mortal),
+        ]
+        return my_urls + urls
+
+    def set_immortal(self, request):
+        self.model.objects.all().update(ticker_code='999999')
+        self.message_user(request, "All heroes are now immortal")
+        return HttpResponseRedirect("../")
+
+    def set_mortal(self, request):
+        self.model.objects.all().update(ticker_code='111111')
+        self.message_user(request, "All heroes are now mortal")
+        return HttpResponseRedirect("../")
 
 class EventAdminSite(AdminSite):
     site_header = "Stock Site Admin"
@@ -37,6 +55,7 @@ class EventAdminSite(AdminSite):
         if 'delete_selected' in actions:
             del actions['delete_selected']
         return actions
+    change_list_template = "stock/temp_changelist.html"
     
 event_admin_site = EventAdminSite(name='event_admin')
 event_admin_site.register(Company, SomeModelAdmin)
