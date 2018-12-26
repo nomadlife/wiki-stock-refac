@@ -154,7 +154,7 @@ class amChartData(APIView):
         target = df.index[df.y == 'null'][90]
         labels = df[:target].index.strftime('%Y-%m-%d').tolist()
         value1 = df.y[:target].tolist()
-        value2 = df.yhat[:target].tolist()
+        value2 = df.yhat[:target].round(2).tolist()
         contents = []
         for i in range(len(labels)):
             contents.append({
