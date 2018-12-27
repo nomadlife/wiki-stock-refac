@@ -84,35 +84,25 @@
 
             series.dataFields.valueY = "value1";
             series.dataFields.dateX = "labels";
-            series.tooltipText = "주가:{value1}"
-            series.stroke = am4core.color("#fc8080");
-            series.strokeWidth = 2;
-            series.minBulletDistance = 7;
-
-            // Drop-shaped tooltips
-            series.tooltip.background.cornerRadius = 20;
-            series.tooltip.background.strokeOpacity = 0;
-            series.tooltip.pointerOrientation = "vertical";
+            series.name = "주가";
             series.tooltip.label.minWidth = 40;
-            series.tooltip.label.minHeight = 40;
-            series.tooltip.label.textAlign = "middle";
-            series.tooltip.label.textValign = "middle";
-
+            series.tooltip.getFillFromObject = false;
+            series.tooltip.background.fill = am4core.color("#f27363");
+            series.tooltipText = "{name}:{value1}"
+            series.stroke = am4core.color("#f27363");
+            series.strokeWidth = 2;
+            series.minBulletDistance = 10;
+            
             //series 2
             series2.dataFields.valueY = "value2";
             series2.dataFields.dateX = "labels";
             series2.name = "예측";
-            series2.tooltipText = "{name}:{valueY}";
-
-
-            // Make bullets grow on hover
-            var bullet = series.bullets.push(new am4charts.CircleBullet());
-            bullet.circle.strokeWidth = 2;
-            bullet.circle.radius = 4;
-            bullet.circle.fill = am4core.color("#fff");
-
-            var bullethover = bullet.states.create("hover");
-            bullethover.properties.scale = 1.3;
+            series2.tooltip.label.minWidth = 40;
+            // series2.tooltip.background.fill = am4core.color("#7083c1");
+            series2.tooltipText = "{name}:{value2}";
+            series2.stroke = am4core.color("#7083c1");
+            series2.strokeWidth = 2;
+            series2.minBulletDistance = 10;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();

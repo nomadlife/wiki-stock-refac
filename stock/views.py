@@ -166,7 +166,6 @@ class amChartData(APIView):
             "value1":value1[i],
             "value2":value2[i],
             })
-        # contents.append({"yaxismax":yaxis_max})
         return Response({"data":contents, "yaxismax":yaxis_max})
 
 class AutoComplete(APIView):
