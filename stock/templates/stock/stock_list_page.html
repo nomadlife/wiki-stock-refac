@@ -124,12 +124,13 @@
         const companyName = place.name.replace(regex, `<span class ="">${this.value.toUpperCase()}</span>`);
         const tickerNumber = place.ticker.replace(regex, `<span class ="">${this.value}</span>`);
         return `
-            <li><a class="btn btn-block text-left" href="{% url 'stock-detail' ticker_id=12345 %}">
+            <li><a class="btn btn-block text-left" href="{% url 'stock-detail-am' ticker_id=12345 %}">
               <span class="name"> ${companyName}, ${tickerNumber}</span>
               </a>
             </li>`.replace(/12345/, place.id.toString());
       }).join('');
       suggestions.innerHTML = html;
+      currentLI = 0;
     }
   }
 
@@ -138,5 +139,29 @@
 
 //   searchInput.addEventListener('change', displayMatches);
   searchInput.addEventListener('keyup', displayMatches);
+
+  document.addEventListener("keydown", function (event) {
+    var listItems = document.querySelectorAll('.suggestions li a');
+
+    switch (event.keyCode) {
+      case 38: // up
+        currentLI = currentLI > 0 ? --currentLI : listItems.length - 1;
+        listItems[currentLI].focus()
+        break;
+      case 40: // down
+        if(document.activeElement.tagName == 'INPUT'){
+          listItems[0].focus()
+        }else{
+        currentLI = currentLI < listItems.length - 1 ? ++currentLI : 0;
+        listItems[currentLI].focus()
+        }
+        break;
+      case 27: // esc
+      currentLI =0
+      searchInput.focus()
+      break;
+    }
+  });
+
 </script>
 {% endblock %}

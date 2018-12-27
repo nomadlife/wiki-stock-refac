@@ -52,7 +52,7 @@
         const companyName = place.name.replace(regex, `<span class ="">${this.value.toUpperCase()}</span>`);
         const tickerNumber = place.ticker.replace(regex, `<span class ="">${this.value}</span>`);
         return `
-            <li><a class="btn btn-block text-left" href="{% url 'stock-detail' ticker_id=12345 %}">
+            <li><a class="btn btn-block text-left" href="{% url 'stock-detail-am' ticker_id=12345 %}">
               <span class="name"> ${companyName}, ${tickerNumber}</span>
               </a>
             </li>`.replace(/12345/, place.id.toString());
