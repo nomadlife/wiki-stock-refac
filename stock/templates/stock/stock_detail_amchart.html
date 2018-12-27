@@ -45,16 +45,10 @@
       $.ajax({
             type: "GET",
             url: "{% url 'api-amchart-data' ticker=ticker %}",
-            success: function (data) {
+            success: function (apidata) {
                   console.log("success")
-                  // labels = data.labels
-                  // value1 = data.value1
-                  // value2 = data.value2
-
-                  // labels.forEach((labels, i) => result.push({ "date": labels, "value": value1[i] }));
-                  // console.log(data);
-
-                  drawChart(data)
+                  // console.log('max:',apidata.yaxismax);
+                  drawChart(apidata)
             },
             error: function (error_data) {
                   console.log("error")
@@ -63,28 +57,37 @@
             }
       });
 
-      function drawChart(data) { // Themes begin
+      function drawChart(drawdata) { // Themes begin
             am4core.useTheme(am4themes_animated);
             // Themes end
 
             // Create chart instance
             var chart = am4core.create("chartdiv", am4charts.XYChart);
-            console.log('check');
-
+            chart.numberFormatter.numberFormat = "#.#";
             // Add data
-            chart.data = data;
+            chart.data = drawdata.data;
+            // console.log('data:',chart.data);
 
             // Create axes
             var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
             var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
             valueAxis.logarithmic = false;
+            valueAxis.defaultState.transitionDuration = 500;
+            valueAxis.strictMinMax = true;
+            valueAxis.min = 0.1;
+            valueAxis.max = drawdata.yaxismax;
+            valueAxis.extraMax = 0.2;
+
             // Create series
             var series = chart.series.push(new am4charts.LineSeries());
+            var series2 = chart.series.push(new am4charts.LineSeries());
+
             series.dataFields.valueY = "value1";
             series.dataFields.dateX = "labels";
-            series.tooltipText = "{value1}"
+            series.tooltipText = "주가:{value1}"
+            series.stroke = am4core.color("#fc8080");
             series.strokeWidth = 2;
-            series.minBulletDistance = 15;
+            series.minBulletDistance = 7;
 
             // Drop-shaped tooltips
             series.tooltip.background.cornerRadius = 20;
@@ -94,6 +97,13 @@
             series.tooltip.label.minHeight = 40;
             series.tooltip.label.textAlign = "middle";
             series.tooltip.label.textValign = "middle";
+
+            //series 2
+            series2.dataFields.valueY = "value2";
+            series2.dataFields.dateX = "labels";
+            series2.name = "예측";
+            series2.tooltipText = "{name}:{valueY}";
+
 
             // Make bullets grow on hover
             var bullet = series.bullets.push(new am4charts.CircleBullet());
@@ -112,6 +122,7 @@
             chart.scrollbarY = new am4core.Scrollbar();
             chart.scrollbarY.parent = chart.leftAxesContainer;
             chart.scrollbarY.toBack();
+            chart.scrollbarY.hide(true);
 
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
@@ -119,7 +130,7 @@
             chart.scrollbarX.parent = chart.bottomAxesContainer;
 
             chart.events.on("ready", function () {
-                  dateAxis.zoom({ start: 0.79, end: 1 });
+                  dateAxis.zoom({ start: 0.85, end: 1 });
             });
 
       }
