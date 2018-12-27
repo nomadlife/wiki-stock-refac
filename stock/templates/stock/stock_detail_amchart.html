@@ -74,9 +74,9 @@
             valueAxis.logarithmic = false;
             valueAxis.defaultState.transitionDuration = 500;
             valueAxis.strictMinMax = true;
-            valueAxis.min = 0.1;
-            valueAxis.max = drawdata.yaxismax;
-            valueAxis.extraMax = 0.2;
+            // valueAxis.min = 0.1;
+            // valueAxis.max = drawdata.yaxismax;
+            // valueAxis.extraMax = 0.2;
 
             // Create series
             var series = chart.series.push(new am4charts.LineSeries());
@@ -84,7 +84,7 @@
 
             series.dataFields.valueY = "value1";
             series.dataFields.dateX = "labels";
-            series.name = "주가";
+            series.name = "종가";
             series.tooltip.label.minWidth = 40;
             series.tooltip.getFillFromObject = false;
             series.tooltip.background.fill = am4core.color("#f27363");
@@ -92,7 +92,7 @@
             series.stroke = am4core.color("#f27363");
             series.strokeWidth = 2;
             series.minBulletDistance = 10;
-            
+            series.connect = false;
             //series 2
             series2.dataFields.valueY = "value2";
             series2.dataFields.dateX = "labels";
@@ -103,16 +103,18 @@
             series2.stroke = am4core.color("#7083c1");
             series2.strokeWidth = 2;
             series2.minBulletDistance = 10;
+            series2.connect = false;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
             chart.cursor.behavior = "panXY";
 
+            
             // Create vertical scrollbar and place it before the value axis
             chart.scrollbarY = new am4core.Scrollbar();
             chart.scrollbarY.parent = chart.leftAxesContainer;
             chart.scrollbarY.toBack();
-            chart.scrollbarY.hide(true);
+            // chart.scrollbarY.hide(true);
 
             // Create a horizontal scrollbar with previe and place it underneath the date axis
             chart.scrollbarX = new am4charts.XYChartScrollbar();
