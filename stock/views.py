@@ -151,10 +151,14 @@ class amChartData(APIView):
     def get(self, request, format=None,  *args, **kwargs):
         ticker = self.kwargs['ticker']
         df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target_valid = df.index[df.y == 'null'][0] - pd.DateOffset(days=1)
         target = df.index[df.y == 'null'][90]
+        print(target_valid,target)
         labels = df[:target].index.strftime('%Y-%m-%d').tolist()
         value1 = df.y[:target].tolist()
         value2 = df.yhat[:target].round(2).tolist()
+        yaxis_max = max(df.y[:target_valid].tolist())
+        print('max_y:',yaxis_max)
         contents = []
         for i in range(len(labels)):
             contents.append({
@@ -162,7 +166,8 @@ class amChartData(APIView):
             "value1":value1[i],
             "value2":value2[i],
             })
-        return Response(contents)
+        # contents.append({"yaxismax":yaxis_max})
+        return Response({"data":contents, "yaxismax":yaxis_max})
 
 class AutoComplete(APIView):
     authentication_classes = []
