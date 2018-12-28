@@ -22,7 +22,7 @@ def stock_list_page(request):
     data = [i.split(',') for i in file.readlines()]
     for j in data:
         j[2] = j[2].zfill(6)
-    paginator = Paginator(data, 50)
+    paginator = Paginator(data, 25)
     page = request.GET.get('page')
     data_paged = paginator.get_page(page)
     context = {'file_content': data_paged}
@@ -144,8 +144,65 @@ class ChartData(APIView):
         "value2":value2,
         }
         return Response(contents)
-
+        
 class amChartData(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target = df.index[df.y == 'null'][90]
+        labels = df[:target].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[:target].tolist()
+        value2 = df.yhat[:target].round(2).tolist()
+        contents = []
+        for i in range(len(labels)):
+            contents.append({
+            "labels":labels[i],
+            "value1":value1[i],
+            "value2":value2[i],
+            })
+        return Response(contents)
+
+class amChartData_json(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        contents = df.to_json(orient='index')
+        return Response(contents)
+
+class amChartData_json2(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        contents = df.to_json(orient='index')
+        return JsonResponse(contents, safe=False)
+
+class amChartData2(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target = df.index[df.y == 'null'][90]
+        labels = df[:target].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[:target].tolist()
+        value2 = df.yhat[:target].round(2).tolist()
+        value1_new = ["" if x == 'null' else x for x in value1]
+        contents = []
+        for i in range(len(labels)):
+            contents.append({
+            "labels":labels[i],
+            "value1":value1_new[i],
+            "value2":value2[i],
+            })
+        return Response(contents)
+
+class amChartData3(APIView):
     authentication_classes = []
     permission_classes = []
     def get(self, request, format=None,  *args, **kwargs):
@@ -157,13 +214,14 @@ class amChartData(APIView):
         labels = df[:target].index.strftime('%Y-%m-%d').tolist()
         value1 = df.y[:target].tolist()
         value2 = df.yhat[:target].round(2).tolist()
+        value1_new = ["" if x == 'null' else x for x in value1]
         yaxis_max = max(df.y[:target_valid].tolist())
         print('max_y:',yaxis_max)
         contents = []
         for i in range(len(labels)):
             contents.append({
             "labels":labels[i],
-            "value1":value1[i],
+            "value1":value1_new[i],
             "value2":value2[i],
             })
         return Response({"data":contents, "yaxismax":yaxis_max})

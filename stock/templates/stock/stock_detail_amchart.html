@@ -36,18 +36,12 @@
 
 <script>
       var ticker = "{{ticker}}"
-      var data1 = []
-      var data2 = []
-      var labels = []
-      var result = []
-
 
       $.ajax({
             type: "GET",
             url: "{% url 'api-amchart-data' ticker=ticker %}",
             success: function (apidata) {
                   console.log("success")
-                  // console.log('max:',apidata.yaxismax);
                   drawChart(apidata)
             },
             error: function (error_data) {
@@ -65,7 +59,7 @@
             var chart = am4core.create("chartdiv", am4charts.XYChart);
             chart.numberFormatter.numberFormat = "#.#";
             // Add data
-            chart.data = drawdata.data;
+            chart.data = drawdata;
             // console.log('data:',chart.data);
 
             // Create axes
@@ -92,7 +86,7 @@
             series.stroke = am4core.color("#f27363");
             series.strokeWidth = 2;
             series.minBulletDistance = 10;
-            series.connect = false;
+            // series.connect = false;
             //series 2
             series2.dataFields.valueY = "value2";
             series2.dataFields.dateX = "labels";
@@ -103,7 +97,7 @@
             series2.stroke = am4core.color("#7083c1");
             series2.strokeWidth = 2;
             series2.minBulletDistance = 10;
-            series2.connect = false;
+            // series2.connect = false;
 
             // Make a panning cursor
             chart.cursor = new am4charts.XYCursor();
