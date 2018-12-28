@@ -53,6 +53,7 @@
       {% if file_content.has_previous or file_content.has_next %}
       <div class="pagination text-xs-center">
             <span class="step-links">
+
                   {% if file_content.has_previous %}
                   <a href="?page=1" class="btn btn-primary btn-sm mb-4"><span class="fa fa-fast-backward"></span></a>
                   <a href="?page={{ file_content.previous_page_number }}" class="btn btn-primary btn-sm mb-4"><span
@@ -61,11 +62,16 @@
                   <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-fast-backward"></span></a>
                   <a href="#" class="btn btn-primary btn-sm mb-4 disabled"><span class="fa fa-step-backward"></span></a>
                   {% endif %}
-
                   {% for num in file_content.paginator.page_range %}
-                  {% if file_content.number == num %}
+                  {% if num == file_content.number %}
                   <a href="#" class="btn btn-primary btn-sm mb-4 disabled">{{ num }}</a>
-                  {% elif num > file_content.number|add:'-7' and num < file_content.number|add:'7' %} 
+                  {% elif file_content.number <= 5 and num <= 10 %} 
+                  <a href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+                        class="btn btn-outline-primary btn-sm mb-4">{{ num }}</a>
+                  {% elif file_content.number >= file_content.paginator.num_pages|add:'-5' and num >= file_content.paginator.num_pages|add:'-10' %} 
+                  <a href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+                        class="btn btn-outline-primary btn-sm mb-4">{{ num }}</a>
+                  {% elif num > file_content.number|add:'-6' and num < file_content.number|add:'6' %} 
                   <a href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
                         class="btn btn-outline-primary btn-sm mb-4">{{ num }}</a>
                   {% endif %}
