@@ -233,6 +233,31 @@ class amChartData3(APIView):
             })
         return Response({"data":contents, "yaxismax":yaxis_max})
 
+class amChartData4(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target = df.index[df.y == 0][90]
+        labels = df[:target].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[:target].tolist()
+        value2 = df.yhat[:target].round(2).tolist()
+        contents = []
+        for i in range(len(labels)):
+            if value1[i] == 0:
+                contents.append({
+                "labels":labels[i],
+                "value2":value2[i],
+                })
+            else:
+                contents.append({
+                "labels":labels[i],
+                "value1":value1[i],
+                "value2":value2[i],
+                })
+        return Response(contents)
+
 class AutoComplete(APIView):
     authentication_classes = []
     permission_classes = []
