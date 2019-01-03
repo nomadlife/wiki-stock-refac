@@ -22,7 +22,7 @@ def stock_list_page(request):
     data = [i.split(',') for i in file.readlines()]
     for j in data:
         j[2] = j[2].zfill(6)
-    paginator = Paginator(data, 25)
+    paginator = Paginator(data, 20)
     page = request.GET.get('page')
     data_paged = paginator.get_page(page)
     context = {'file_content': data_paged}

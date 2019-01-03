@@ -48,7 +48,7 @@
                         <td><a href="{% url 'stock-detail-am' ticker_id=item.0 %}">{{ item.1 }}</a></td>
 
                         <td>
-                              <canvas id="miniChart{{ item.2 }}" width="60" height="30"></canvas>
+                              <canvas id="miniChart{{ item.2 }}" width="60" height="25"></canvas>
                               <script>
                                     var data1 = []
                                     var labels = []
@@ -131,7 +131,7 @@
                               </script>
                         </td>
                         <td>
-                              <canvas id="miniChartpredict{{ item.2 }}" width="60" height="30"></canvas>
+                              <canvas id="miniChartpredict{{ item.2 }}" width="60" height="25"></canvas>
                               <script>
                                           var data2 = []
                                           var labels2 = []
