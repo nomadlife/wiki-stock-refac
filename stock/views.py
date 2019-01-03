@@ -170,10 +170,10 @@ class miniChartData_predict(APIView):
         target = df.index[df.y == 0][0]
         target2 = df.index[df.y == 0][90]
         labels = df[target:target2].index.strftime('%Y-%m-%d').tolist()
-        value1 = df.y[target:target2].tolist()
+        value2 = df.yhat[target:target2].tolist()
         contents = {
         "labels":labels,
-        "value1":value1,
+        "value2":value2,
         }
         return Response(contents)
 

@@ -35,6 +35,9 @@
                         <th>
                               주가(6개월)
                         </th>
+                        <th>
+                              예측(3개월)
+                        </th>
                   </tr>
             </thead>
             <tbody>
@@ -127,7 +130,89 @@
                                     }
                               </script>
                         </td>
-
+                        <td>
+                              <canvas id="miniChartpredict{{ item.2 }}" width="60" height="30"></canvas>
+                              <script>
+                                          var data2 = []
+                                          var labels2 = []
+      
+                                          $.ajax({
+                                                type: "GET",
+                                                url: "{% url 'api-minichartpredict-data' ticker=item.2 %}",
+                                                success: function (data2) {
+                                                      console.log("success")
+                                                      labels2 = data2.labels
+                                                      value2 = data2.value2
+      
+                                                      setChart2("{{item.2}}")
+                                                },
+                                                error: function (error_data) {
+                                                      console.log("error")
+                                                      console.log('url:', url)
+                                                      console.log(error_data)
+                                                }
+                                          });
+                                          function setChart2(ticker) {
+                                                var ctx = document.getElementById("miniChartpredict"+ticker);
+                                                var myChart = new Chart(ctx, {
+                                                      type: 'line',
+                                                      data: {
+                                                            labels: labels2,
+                                                            datasets: [{
+                                                                  data: value2,
+                                                                  fill: false,
+                                                                  lineTension: 0,
+                                                                  borderColor: 'rgba(75, 192, 192, 1)',
+                                                                  borderWidth: 1,
+                                                                  // showLine: false,
+                                                                  pointRadius: 0,
+                                                                  // pointBackgroundColor: [],
+                                                                  // pointBorderColor: [],
+                                                            }]
+                                                      },
+                                                      options: {
+                                                            tooltips: {
+                                                                  enabled: false,
+                                                                  // intersect: false,
+                                                                  // mode: 'index',
+                                                                  // axis: 'x'
+                                                            },
+                                                            scales: {
+                                                                  xAxes: [{
+                                                                        display: false,
+                                                                        ticks: {
+                                                                              // padding: 0,
+                                                                              display: false //this will remove only the label
+                                                                        },
+                                                                        gridLines: {
+                                                                              display:false,
+                                                                              // drawBorder: false,
+                                                                        }
+                                                                  }],
+                                                                  yAxes: [{
+                                                                        display: false,
+                                                                        ticks: {
+                                                                              // min: 0,
+                                                                              display: false //this will remove only the label
+                                                                        },
+                                                                        gridLines: {
+                                                                              display:false,
+                                                                              drawBorder: false,
+                                                                        }
+                                                                  }]
+                                                            },
+                                                            legend: {
+                                                                  display: false,
+                                                                  position: 'top',
+                                                            },
+                                                            animation: false,
+                                                            responsive: false,
+                                                            // maintainAspectRatio: true,
+                                                      }
+                                                })
+                                          }
+                                    </script>
+                        </td>
                   </tr>
                   {% endfor %}
             </tbody>
