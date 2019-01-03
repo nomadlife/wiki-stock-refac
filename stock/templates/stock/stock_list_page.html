@@ -86,25 +86,32 @@
                                                 },
                                                 options: {
                                                       tooltips: {
-                                                            intersect: false,
-                                                            mode: 'index',
-                                                            axis: 'x'
+                                                            enabled: false,
+                                                            // intersect: false,
+                                                            // mode: 'index',
+                                                            // axis: 'x'
                                                       },
                                                       scales: {
                                                             xAxes: [{
+                                                                  display: false,
                                                                   ticks: {
+                                                                        // padding: 0,
                                                                         display: false //this will remove only the label
                                                                   },
                                                                   gridLines: {
-                                                                        display:false
+                                                                        display:false,
+                                                                        // drawBorder: false,
                                                                   }
                                                             }],
                                                             yAxes: [{
+                                                                  display: false,
                                                                   ticks: {
+                                                                        // min: 0,
                                                                         display: false //this will remove only the label
                                                                   },
                                                                   gridLines: {
-                                                                        display:false
+                                                                        display:false,
+                                                                        drawBorder: false,
                                                                   }
                                                             }]
                                                       },
