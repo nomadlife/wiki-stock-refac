@@ -145,6 +145,21 @@ class ChartData(APIView):
         }
         return Response(contents)
 
+class miniChartData(APIView):
+    authentication_classes = []
+    permission_classes = []
+    def get(self, request, format=None,  *args, **kwargs):
+        ticker = self.kwargs['ticker']
+        df = pd.read_pickle(os.path.join(base.BASE_DIR, 'stock/statics/stock/data/{}'.format(ticker)))
+        target = df.index[df.y != 0][-130]
+        target2 = df.index[df.y != 0][-1]
+        labels = df[target:target2].index.strftime('%Y-%m-%d').tolist()
+        value1 = df.y[target:target2].tolist()
+        contents = {
+        "labels":labels,
+        "value1":value1,
+        }
+        return Response(contents)
 
 class amChartData_json(APIView):
     authentication_classes = []
